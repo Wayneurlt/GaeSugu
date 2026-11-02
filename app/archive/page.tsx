@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Photo from "@/components/photo";
+import type { PhotoId } from "@/lib/photos";
 import { NewsletterBlock, PageHero } from "@/components/blocks";
 import { journey } from "@/lib/site";
 
@@ -8,13 +10,13 @@ export const metadata: Metadata = {
   description: "A living digital archive of African knowledge: voices, photographs, journals, artefacts and indigenous knowledge.",
 };
 
-const collections = [
-  { title: "Voices", text: "Recorded interviews with elders, healers, rainmakers and artisans.", bg: "#E2C2B2", href: "/history-culture/oral-history" },
-  { title: "Photographs", text: "Communities, ceremonies, wildlife and landscapes.", bg: "#C9DCE3", href: "/photography" },
-  { title: "Journals", text: "Our field journals, county by county.", bg: "#EBD9B4", href: "/travel/field-notes" },
-  { title: "Artefacts", text: "Proper records of objects: what they are, who made them and how they are used.", bg: "#E8D3B8", href: "/history-culture/heritage-sites" },
-  { title: "Indigenous knowledge", text: "Plants, seasons, sky and land, as taught by those who know.", bg: "#B7C7A8", href: "/animals-nature/plants-healing" },
-  { title: "Beliefs & omens", text: "What our communities believe about animals and places, and why.", bg: "#C9D6B8", href: "/animals-nature/sacred-nature" },
+const collections: { title: string; text: string; bg: string; href: string; photo?: PhotoId }[] = [
+  { title: "Voices", text: "Recorded interviews with elders, healers, rainmakers and artisans.", bg: "#E2C2B2", href: "/history-culture/oral-history", photo: "boatman" },
+  { title: "Photographs", text: "Communities, ceremonies, wildlife and landscapes.", bg: "#C9DCE3", href: "/photography", photo: "egret" },
+  { title: "Journals", text: "Our field journals, county by county.", bg: "#EBD9B4", href: "/travel/field-notes", photo: "longonot" },
+  { title: "Artefacts", text: "Proper records of objects: what they are, who made them and how they are used.", bg: "#E8D3B8", href: "/history-culture/heritage-sites", photo: "dugoutCanoes" },
+  { title: "Indigenous knowledge", text: "Plants, seasons, sky and land, as taught by those who know.", bg: "#B7C7A8", href: "/animals-nature/plants-healing", photo: "sausageTree" },
+  { title: "Beliefs & omens", text: "What our communities believe about animals and places, and why.", bg: "#C9D6B8", href: "/animals-nature/sacred-nature", photo: "mossForest" },
 ];
 
 export default function ArchivePage() {
@@ -34,7 +36,11 @@ export default function ArchivePage() {
         <div className="keep-grid">
           {collections.map((c) => (
             <Link key={c.title} href={c.href} className="keep-card">
-              <div className="arch" style={{ background: c.bg, height: 240 }} />
+              {c.photo ? (
+                <Photo id={c.photo} className="arch" sizes="(max-width: 700px) 100vw, 360px" style={{ background: c.bg, height: 240 }} />
+              ) : (
+                <div className="arch" style={{ background: c.bg, height: 240 }} />
+              )}
               <span className="card-title">{c.title}</span>
               <span className="muted small">{c.text}</span>
             </Link>

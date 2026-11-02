@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { LogoMark } from "./Logo";
+import type { ReactNode } from "react";
+import Photo from "./photo";
 import {
   type Article,
   type GaeEvent,
@@ -13,27 +14,25 @@ import {
 
 export function Footer() {
   return (
-    <footer className="footer">
+    <footer id="contact" className="footer">
       <div className="container center stack-md">
-        <Link href="/" className="footer-brand" aria-label="Gae Sugu home">
-          <LogoMark size={36} />
-          <span className="logo-word" style={{ fontSize: 26 }}>
-            GAE SUGU
-          </span>
-        </Link>
+        <span className="logo-word" style={{ fontSize: 30 }}>
+          GAE
+        </span>
         <nav aria-label="Footer" className="footer-nav">
-          <Link href="/about">About</Link>
-          <Link href="/articles">Articles</Link>
+          <Link href="/explore">Explore Africa</Link>
+          <Link href="/history-culture">Culture &amp; Heritage</Link>
+          <Link href="/animals-nature">Biodiversity</Link>
+          <Link href="/diaspora">Diaspora</Link>
           <Link href="/archive">Archive</Link>
-          <Link href="/founders">Founders</Link>
-          <Link href="/support">Support</Link>
-          <Link href="/newsletter">Newsletter</Link>
+          <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
-          <a href={links.youtube}>YouTube</a>
+          <Link href="/support">Support</Link>
           <a href={links.instagram}>Instagram</a>
           <a href={links.tiktok}>TikTok</a>
+          <a href={links.youtube}>YouTube</a>
         </nav>
-        <span style={{ fontSize: 17, color: "#5A4A3C" }}>© 2026 Gae Sugu</span>
+        <span style={{ fontSize: 17, color: "#5A4A3C" }}>[email@gae.africa] · © 2026 Gae</span>
       </div>
     </footer>
   );
@@ -99,7 +98,16 @@ export function ArticleCard({ article }: { article: Article }) {
   const topic = category?.topics.find((t) => t.slug === article.topic);
   return (
     <Link href={`/articles/${article.slug}`} className="article-card">
-      <div className="article-card-photo" style={{ background: article.color }} />
+      {article.photo ? (
+        <Photo
+          id={article.photo}
+          className="article-card-photo"
+          sizes="(max-width: 900px) 100vw, 400px"
+          style={{ background: article.color }}
+        />
+      ) : (
+        <div className="article-card-photo" style={{ background: article.color }} />
+      )}
       <span className="kicker">{(topic?.label ?? category?.label ?? "").toUpperCase()}</span>
       <span className="card-title-lg">{article.title}</span>
       <span className="muted small">{article.excerpt}</span>
@@ -147,7 +155,7 @@ export function EventList({ items }: { items: GaeEvent[] }) {
             <span className="card-title-lg">{e.title}</span>
             <span style={{ color: "#E9EDE4" }}>{e.meta}</span>
           </div>
-          <Link href="/contact" className="event-cta">
+          <Link href="/contact?topic=event" className="event-cta">
             {e.cta}
           </Link>
         </div>
@@ -219,7 +227,7 @@ export function Founders({ withHeading = true }: { withHeading?: boolean }) {
       )}
       {founders.map((f, i) => (
         <div key={f.name} className={`founder${i > 0 ? " divided" : ""}`}>
-          <div className="founder-photo" style={{ background: f.bg }} />
+          <Photo id={f.photo} decorative className="founder-photo" sizes="200px" style={{ background: f.bg }} />
           <div className="founder-body">
             <span className="card-title-xl">{f.name}</span>
             <span className="italic terracotta">{f.role}</span>
@@ -263,14 +271,62 @@ export function SupportBlock() {
           Every trip, interview and photograph is made possible by people like you.
         </p>
         <div className="support-cta">
-          <Link href="/support" className="btn btn-white">
+          <a href={links.buyMeACoffee} className="btn btn-white">
             BUY US A COFFEE
-          </Link>
-          <Link href="/support" className="btn btn-outline-white">
+          </a>
+          <Link href="/support#donate" className="btn btn-outline-white">
             DONATE
           </Link>
         </div>
       </div>
     </section>
+  );
+}
+
+export const contactTopics = {
+  story: "I have a story or knowledge to share",
+  work: "Photographs, writing or research to submit",
+  visit: "A place you should visit",
+  event: "Events and schools",
+  partner: "Partnerships and press",
+  other: "Something else",
+};
+
+export type ContactTopic = keyof typeof contactTopics;
+
+export function isContactTopic(value: unknown): value is ContactTopic {
+  return typeof value === "string" && value in contactTopics;
+}
+
+export function ContactForm({ topic = "story", extra }: { topic?: ContactTopic; extra?: ReactNode }) {
+  return (
+    <form className="contact-form">
+      <label>
+        Name
+        <input type="text" name="name" autoComplete="name" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" autoComplete="email" />
+      </label>
+      <label>
+        What is it about?
+        <select name="topic" defaultValue={topic}>
+          {Object.entries(contactTopics).map(([value, label]) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </label>
+      {extra}
+      <label>
+        Message
+        <textarea name="message" rows={6} />
+      </label>
+      <button type="button" className="btn btn-solid">
+        SEND
+      </button>
+    </form>
   );
 }

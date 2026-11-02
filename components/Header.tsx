@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
+import Photo from "./photo";
 import { navSections } from "@/lib/nav";
 
 export default function Header() {
@@ -41,7 +42,7 @@ export default function Header() {
           <span />
           <span />
         </button>
-        <Link href="/" aria-label="Gae Sugu home">
+        <Link href="/" aria-label="Gae home">
           <Logo size={44} />
         </Link>
         <Link href="/support" className="header-support">
@@ -58,13 +59,15 @@ export default function Header() {
                   <path d="M4 4 L26 26 M26 4 L4 26" stroke="var(--ink)" strokeWidth="1.6" />
                 </svg>
               </button>
-              <Logo size={32} />
-              <button type="button" className="icon-btn icon-btn--end" aria-label="Search">
+              <span className="logo-word" style={{ fontSize: 32 }}>
+                GAE
+              </span>
+              <Link href="/search" className="icon-btn icon-btn--end" aria-label="Search" onClick={closeMenu}>
                 <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
                   <circle cx="11" cy="11" r="8" fill="none" stroke="var(--ink)" strokeWidth="1.8" />
                   <path d="M17 17 L24 24" stroke="var(--ink)" strokeWidth="1.8" />
                 </svg>
-              </button>
+              </Link>
             </div>
 
             <nav aria-label="Main" className="menu-nav">
@@ -98,9 +101,9 @@ export default function Header() {
                               View all {s.label}
                             </Link>
                             <span className="menu-latest-label">Latest—</span>
-                            {s.latest.map((l) => (
-                              <Link key={l.href + l.title} href={l.href} onClick={closeMenu} className="menu-latest">
-                                <span className="menu-thumb" style={{ background: l.color }} />
+                            {s.latest.map((l, i) => (
+                              <Link key={i} href={l.href} onClick={closeMenu} className="menu-latest">
+                                <Photo id={l.photo} decorative className="menu-thumb" sizes="120px" style={{ background: l.color }} />
                                 <span className="menu-latest-title">{l.title}</span>
                               </Link>
                             ))}

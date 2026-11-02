@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Photo from "@/components/photo";
 import { notFound } from "next/navigation";
 import { ArticleGrid, SupportBlock } from "@/components/blocks";
 import { articles, articlesFor, getArticle, getCategory } from "@/lib/site";
@@ -48,9 +49,13 @@ export default async function ArticlePage({ params }: Props) {
             By {article.author} | {article.county} | {article.minutes} mins
           </span>
         </header>
-        <div className="photo" style={{ background: article.color, height: 480 }}>
-          <span className="placeholder-note muted">[LEAD PHOTO + caption]</span>
-        </div>
+        {article.photo ? (
+          <Photo id={article.photo} priority sizes="(max-width: 960px) 100vw, 920px" style={{ background: article.color, height: 480 }} />
+        ) : (
+          <div className="photo" style={{ background: article.color, height: 480 }}>
+            <span className="placeholder-note muted">[LEAD PHOTO + caption]</span>
+          </div>
+        )}
         <div className="prose">
           <p>[Opening paragraph: set the scene. Where are we, who are we with, and why does this matter?]</p>
           <p>[The story: what we saw and heard. Quote the people we spoke with in their own words.]</p>

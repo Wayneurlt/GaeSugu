@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/blocks";
+import { ContactForm, PageHero, isContactTopic } from "@/components/blocks";
 import { links } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   description: "Get in touch with Gae Sugu.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams }: { searchParams: Promise<{ topic?: string }> }) {
+  const { topic } = await searchParams;
   return (
     <>
       <PageHero
@@ -17,33 +18,7 @@ export default function ContactPage() {
         crumbs={[{ label: "Contact" }]}
       />
       <section className="container section contact">
-        <form className="contact-form">
-          <label>
-            Name
-            <input type="text" name="name" />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" />
-          </label>
-          <label>
-            What is it about?
-            <select name="topic" defaultValue="story">
-              <option value="story">I have a story or knowledge to share</option>
-              <option value="visit">A place you should visit</option>
-              <option value="event">Events and schools</option>
-              <option value="partner">Partnerships and press</option>
-              <option value="other">Something else</option>
-            </select>
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows={6} />
-          </label>
-          <button type="button" className="btn btn-solid">
-            SEND
-          </button>
-        </form>
+        <ContactForm topic={isContactTopic(topic) ? topic : undefined} />
         <div className="contact-info stack-sm">
           <span className="kicker">EMAIL</span>
           <span>{links.email}</span>

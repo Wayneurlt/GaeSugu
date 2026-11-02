@@ -35,7 +35,7 @@ export default function SupportPage() {
             BUY US A COFFEE
           </a>
         </div>
-        <div className="support-option">
+        <div id="donate" className="support-option">
           <span className="kicker">ANY AMOUNT</span>
           <h2 className="card-title-xl">Donate</h2>
           <p className="muted" style={{ margin: 0 }}>

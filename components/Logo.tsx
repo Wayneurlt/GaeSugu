@@ -41,13 +41,13 @@ type LogoProps = {
   horizon?: string;
 };
 
-/** Mark + "GAE SUGU" wordmark, as in the shared logo file. */
+/** Mark + "GAE" wordmark. */
 export function Logo({ size = 44, color = "var(--ink)", horizon = "#FFFFFF" }: LogoProps) {
   return (
     <span className="logo" style={{ color }}>
       <LogoMark size={size} ink={color} horizon={horizon} />
-      <span className="logo-word" style={{ fontSize: size * 0.72 }}>
-        GAE SUGU
+      <span className="logo-word" style={{ fontSize: size }}>
+        GAE
       </span>
     </span>
   );

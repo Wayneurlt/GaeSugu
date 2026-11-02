@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NewsletterBlock, PageHero, TopicChips } from "@/components/blocks";
-import { GalleryGrid, PhotoOfTheWeek } from "@/components/photo";
+import Photo, { GalleryGrid, PhotoOfTheWeek } from "@/components/photo";
 import { galleries, getCategory, getTopic } from "@/lib/site";
 
 type Props = { params: Promise<{ topic: string }> };
@@ -48,10 +48,8 @@ export default async function PhotographyTopicPage({ params }: Props) {
               <h2 className="display-sm">Past weeks</h2>
             </div>
             <div className="gallery">
-              {["#D9D3C7", "#C9D6B8", "#E2C2B2", "#C9DCE3", "#EBD9B4", "#B7C7A8"].map((c, i) => (
-                <div key={i} className="photo" style={{ background: c }}>
-                  <span className="placeholder-note muted">[Week {i + 1} photo]</span>
-                </div>
+              {(["beachCrows", "kingfisher", "clearLake", "longonot", "palmFence", "hillsideWater"] as const).map((id) => (
+                <Photo key={id} id={id} sizes="(max-width: 700px) 100vw, 400px" style={{ background: "#D9D3C7" }} />
               ))}
             </div>
           </section>
