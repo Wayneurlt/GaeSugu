@@ -1,0 +1,292 @@
+{
+  "sections": [
+    {
+      "label": "Explore Africa",
+      "viewAllHref": "/explore",
+      "links": [
+        {
+          "label": "East Africa (starting with Kenya)",
+          "href": "/explore#east-africa"
+        },
+        {
+          "label": "West Africa",
+          "href": "/explore#west-africa"
+        },
+        {
+          "label": "Central Africa",
+          "href": "/explore#central-africa"
+        },
+        {
+          "label": "Southern Africa",
+          "href": "/explore#southern-africa"
+        },
+        {
+          "label": "North Africa",
+          "href": "/explore#north-africa"
+        },
+        {
+          "label": "Indian Ocean Islands",
+          "href": "/explore#indian-ocean-islands"
+        }
+      ],
+      "latest": [
+        {
+          "title": "[Latest field story · Kajiado]",
+          "href": "/explore",
+          "photo": "forestPath",
+          "color": "#C9D6B8"
+        },
+        {
+          "title": "[Coming next · Western Kenya]",
+          "href": "/explore",
+          "photo": "lonePalm",
+          "color": "#E2C2B2"
+        }
+      ]
+    },
+    {
+      "label": "Culture & Heritage",
+      "viewAllHref": "/history-culture",
+      "links": [
+        {
+          "label": "Traditions & Ceremonies",
+          "href": "/history-culture/traditions-ceremonies"
+        },
+        {
+          "label": "Folklore, Music & Food",
+          "href": "/history-culture/folklore-music-food"
+        },
+        {
+          "label": "Languages",
+          "href": "/history-culture/languages"
+        },
+        {
+          "label": "Crafts & Artisans",
+          "href": "/history-culture/crafts-artisans"
+        },
+        {
+          "label": "Elders, Healers & Rainmakers",
+          "href": "/history-culture/oral-history"
+        },
+        {
+          "label": "Myths or Meaning?",
+          "href": "/animals-nature/sacred-nature"
+        },
+        {
+          "label": "Who Are We? (essays by Naomi)",
+          "href": "/history-culture/roots-identity"
+        }
+      ],
+      "latest": [
+        {
+          "title": "[Latest interview]",
+          "href": "/history-culture",
+          "photo": "boatman",
+          "color": "#C9D6B8"
+        },
+        {
+          "title": "[Latest essay title]",
+          "href": "/history-culture",
+          "photo": "coastVillage",
+          "color": "#E2C2B2"
+        }
+      ]
+    },
+    {
+      "label": "Biodiversity & Conservation",
+      "viewAllHref": "/animals-nature",
+      "links": [
+        {
+          "label": "Wildlife",
+          "href": "/animals-nature/wildlife"
+        },
+        {
+          "label": "Plants & Healing Plants",
+          "href": "/animals-nature/plants-healing"
+        },
+        {
+          "label": "Ecosystems & Landscapes",
+          "href": "/animals-nature/ecosystems-landscapes"
+        },
+        {
+          "label": "Endangered Species",
+          "href": "/animals-nature/endangered-species"
+        },
+        {
+          "label": "Sacred Sites",
+          "href": "/animals-nature/sacred-places"
+        },
+        {
+          "label": "Conservation Stories",
+          "href": "/sustainability/conservation"
+        },
+        {
+          "label": "Sustainable Travel",
+          "href": "/travel/green-travel"
+        }
+      ],
+      "latest": [
+        {
+          "title": "[Species spotlight]",
+          "href": "/animals-nature",
+          "photo": "vervet",
+          "color": "#C9D6B8"
+        },
+        {
+          "title": "[Latest story title]",
+          "href": "/animals-nature",
+          "photo": "kingfisher",
+          "color": "#E2C2B2"
+        }
+      ]
+    },
+    {
+      "label": "Black & African Diaspora",
+      "viewAllHref": "/diaspora",
+      "links": [
+        {
+          "label": "Diaspora Voices",
+          "href": "/diaspora/diaspora-voices"
+        },
+        {
+          "label": "Finding Your Roots",
+          "href": "/diaspora/finding-your-roots"
+        },
+        {
+          "label": "Names & Meanings",
+          "href": "/diaspora/names-meanings"
+        },
+        {
+          "label": "Learn a Language",
+          "href": "/diaspora/learn-a-language"
+        },
+        {
+          "label": "Coming Home",
+          "href": "/diaspora/coming-home"
+        }
+      ],
+      "latest": [
+        {
+          "title": "[Latest diaspora story]",
+          "href": "/diaspora",
+          "photo": "palmGrove",
+          "color": "#C9D6B8"
+        },
+        {
+          "title": "[Latest story title]",
+          "href": "/diaspora",
+          "photo": "muralWall",
+          "color": "#E2C2B2"
+        }
+      ]
+    },
+    {
+      "label": "The Archive",
+      "viewAllHref": "/archive",
+      "links": [
+        {
+          "label": "Articles & Essays",
+          "href": "/articles"
+        },
+        {
+          "label": "Photography",
+          "href": "/photography"
+        },
+        {
+          "label": "Documentaries",
+          "href": "/videos"
+        },
+        {
+          "label": "Artefacts",
+          "href": "/artefacts"
+        }
+      ],
+      "latest": [
+        {
+          "title": "[Latest article]",
+          "href": "/archive",
+          "photo": "mossForest",
+          "color": "#C9D6B8"
+        },
+        {
+          "title": "[Photo of the week]",
+          "href": "/archive",
+          "photo": "egret",
+          "color": "#E2C2B2"
+        }
+      ]
+    },
+    {
+      "label": "Get Involved",
+      "viewAllHref": "/events",
+      "links": [
+        {
+          "label": "Events",
+          "href": "/events"
+        },
+        {
+          "label": "Competitions & Clubs",
+          "href": "/events/competitions-clubs"
+        },
+        {
+          "label": "Contribute",
+          "href": "/contribute"
+        },
+        {
+          "label": "Newsletter",
+          "href": "/newsletter"
+        }
+      ],
+      "latest": [
+        {
+          "title": "[Next event]",
+          "href": "/events",
+          "photo": "clearLake",
+          "color": "#C9D6B8"
+        },
+        {
+          "title": "[Next event]",
+          "href": "/events",
+          "photo": "lakeRocks",
+          "color": "#E2C2B2"
+        }
+      ]
+    },
+    {
+      "label": "About",
+      "viewAllHref": "/about",
+      "links": [
+        {
+          "label": "Mission & Vision",
+          "href": "/about#mission"
+        },
+        {
+          "label": "Founders",
+          "href": "/founders"
+        },
+        {
+          "label": "Our Ethics",
+          "href": "/about#ethics"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "latest": [
+        {
+          "title": "[Latest article]",
+          "href": "/about",
+          "photo": "riftView",
+          "color": "#C9D6B8"
+        },
+        {
+          "title": "[Latest article]",
+          "href": "/about",
+          "photo": "grassHillside",
+          "color": "#E2C2B2"
+        }
+      ]
+    }
+  ]
+}

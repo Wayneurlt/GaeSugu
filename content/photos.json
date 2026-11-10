@@ -1,0 +1,211 @@
+{
+  "photos": [
+    {
+      "id": "coastVillage",
+      "file": "/photos/coast-village-thatched-houses.jpg",
+      "alt": "Thatched houses along a sandy lane under coconut palms",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAF/8QAIRAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhcSIxQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABkRAQACAwAAAAAAAAAAAAAAAAEAAgMRQf/aAAwDAQACEQMRAD8ABpwijLAOFjY5jDnnqsnUrQxXjKFb1nkGkw2zR3iC3Kzq3iUGSPzI+DurUY5ZboloJE2jbtBJxim2RsA8klNKz//Z"
+    },
+    {
+      "id": "mossBark",
+      "file": "/photos/moss-and-lichen-on-bark.jpg",
+      "alt": "Close-up of moss and pale lichen growing on tree bark",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgAB/8QAIBAAAgEEAgMBAAAAAAAAAAAAAQIRAAMEExIxIUFCgf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIRAxEAPwAZSWzkE3QdY7jqasXXes+S0KSoC2wwAme/2hlFnBRVDFV5sfU1uFw0mdZPL6NTsiEjf//Z"
+    },
+    {
+      "id": "dugoutCanoes",
+      "file": "/photos/dugout-canoes-papyrus-shore.jpg",
+      "alt": "Wooden dugout canoes moored on a muddy shore beside tall papyrus",
+      "focus": "50% 75%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAwQFBv/EAB8QAAICAgEFAAAAAAAAAAAAAAECAwQAERMhMWFykv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAEDERP/2gAMAwEAAhEDEQA/AGo+NDsumvYZUr2KvCu3h+hmIFCOYAo8iMO52cIKkydEk2PJyXMxnR//2Q=="
+    },
+    {
+      "id": "boatman",
+      "file": "/photos/boatman-in-papyrus-channel.jpg",
+      "alt": "A boatman with a long pole standing by dugout canoes in a papyrus-lined channel",
+      "focus": "50% 80%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUG/8QAIBAAAgEEAgMBAAAAAAAAAAAAAQIDAAQRIQUTFCIxcf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAXEQADAQAAAAAAAAAAAAAAAAAAARNB/9oADAMBAAIRAxEAPwB0dswbY+VThgTr9mwfysf233kBEupFOMkk6o93yPJW05ja7d8bDAHYpWbwEz//2Q=="
+    },
+    {
+      "id": "gantryCranes",
+      "file": "/photos/old-gantry-cranes-with-birds.jpg",
+      "alt": "Two rusted gantry cranes with birds perched along their beams under a cloudy sky",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgMEBv/EACEQAAEDBAEFAAAAAAAAAAAAAAECAxEABCExEhMyYYGR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQMR/9oADAMBAAIRAxEAPwCwOPBTLKnVQpHHmNHx8prF31GhCXUAYA5DWwfczWVFw+iIuHSQMZ1FA5d3C1AqcXgR3UVURh//2Q=="
+    },
+    {
+      "id": "mossForest",
+      "file": "/photos/moss-draped-forest-tree.jpg",
+      "alt": "An old tree draped in hanging moss in a montane forest",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABQT/xAAgEAACAgICAgMAAAAAAAAAAAABAgMRABITIQQxM1GR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAT/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8APiPHPyOHCrqaqj+Yc2hdmdGJZibOJ+YHEjbRalKQEHr1dZCHavgl6+pBk8g//9k="
+    },
+    {
+      "id": "beachCrows",
+      "file": "/photos/crows-on-beach-fence-at-dusk.jpg",
+      "alt": "Crows perched on a wooden fence along a white-sand beach at dusk",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQIG/8QAIRAAAgEDAwUAAAAAAAAAAAAAAQIDAAQhBRESE1FScbH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQACAxH/2gAMAwEAAhEDEQA/AJ0mzJsYid2DrzUjOPdLJpylRkVngejLzR2ELeJwpo++1q7junjhkKqmDgHc9/lJNrByHchZ/9k="
+    },
+    {
+      "id": "egret",
+      "file": "/photos/egret-on-boat-bow.jpg",
+      "alt": "A white egret preening on the bow of a boat on a sunlit lake",
+      "focus": "45% 65%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMF/8QAIhAAAQQBAgcAAAAAAAAAAAAAAQACAxEEBTESFSEiUWFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwB7tSiA7WvcflKR1SS+kIr2VlS5AZEXRASOGzfKHzjhNSYcwcN6FpBH/9k="
+    },
+    {
+      "id": "clearLake",
+      "file": "/photos/clear-lake-shallows-pebbles.jpg",
+      "alt": "Clear lake shallows over coloured pebbles, with swimmers and green hills beyond",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAIF/8QAIhAAAQMEAAcAAAAAAAAAAAAAAQACAwQFESESMTJSYaHB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABgRAAMBAQAAAAAAAAAAAAAAAAABAxFB/9oADAMBAAIRAxEAPwBsVwneXcVCddsgz7VG5FvVbqknw5p+rDFxlJ5p1PVufFknO0uudBT0/9k="
+    },
+    {
+      "id": "palmFence",
+      "file": "/photos/coconut-palm-beach-fence.jpg",
+      "alt": "A coconut palm leaning over a sandy beach path beside a driftwood fence",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABQL/xAAfEAACAgICAwEAAAAAAAAAAAABAgMRAAQFEiExgaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGhEAAgMBAQAAAAAAAAAAAAAAAgMAAREEQf/aAAwDAQACEQMRAD8AE2VZttZIQbJBFHxdesVTXdlBYUa85ehwE2lIJk2Y0IUgdz2Av5iD63IEgq0Divd9fysSroANu/YdiiLMn//Z"
+    },
+    {
+      "id": "palmGrove",
+      "file": "/photos/palm-grove-white-sand.jpg",
+      "alt": "A grove of tall coconut palms on white sand",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAjEAABAwIFBQAAAAAAAAAAAAABAgMRAAQFEiExQRYiUaHR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABoRAAICAwAAAAAAAAAAAAAAAAACAxESMTL/2gAMAwEAAhEDEQA/AAOYuw8ltLYISTlcLgiKnqaQFHUgcZDx9qpbYRaXJyh5JhWoM91O6Yszs8fERt7pNLl0FY60f//Z"
+    },
+    {
+      "id": "sausageTree",
+      "file": "/photos/sausage-tree-kigelia.jpg",
+      "alt": "Branches of a sausage tree (Kigelia) with long fruits hanging against the sky",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAjEAACAgEDAwUAAAAAAAAAAAACEQEDIQAEEgUGQRMiMWFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABYRAAMAAAAAAAAAAAAAAAAAAAABIf/aAAwDAQACEQMRAD8AL1DcFupKzkoUrCUeNS9yHqWunhxiFmVL+86tB0u2y8a4kSA8iPugS+XL0me2gPM7MEoSu8L80joah//Z"
+    },
+    {
+      "id": "lonePalm",
+      "file": "/photos/lone-palm-in-open-field.jpg",
+      "alt": "A lone palm tree and a bushy tree in an open green field at sunrise",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUH/8QAIBAAAgEDBAMAAAAAAAAAAAAAAQIDAAQRBRITMTRBgf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAESE//aAAwDAQACEQMRAD8AbbLFyGPkUuuAVHYz1mrkFpHxjcRms1iv54JWdJ5FZsbm3H1Shrl7jypD9pqyZR//2Q=="
+    },
+    {
+      "id": "grassHillside",
+      "file": "/photos/tussock-grass-hillside.jpg",
+      "alt": "Tussock grass and scrub on a steep green hillside",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgQF/8QAIRAAAgEDAwUAAAAAAAAAAAAAAQIRAAMEBRJhE1JikaH/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABgRAAIDAAAAAAAAAAAAAAAAAAABAgMS/9oADAMBAAIRAxEAPwCnM1604IxcRrz9zqFUfazjnak5mMe34qkxRDhhOwMsceqLWrbweuE4VTUXdNjhH//Z"
+    },
+    {
+      "id": "vervet",
+      "file": "/photos/vervet-monkey.jpg",
+      "alt": "A vervet monkey resting its hands on a wooden plank",
+      "focus": "50% 45%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAiEAACAQMCBwAAAAAAAAAAAAABAhEAAwQSIRMUMUNRYcH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIRAxEAPwCFbuZYUYyuxSSRsY91XjZ17hQ91lIPQKv0UeNauKp5h1BAnSsiJ87mkLP24ZaghO//2Q=="
+    },
+    {
+      "id": "riftView",
+      "file": "/photos/rift-valley-view-from-ridge.jpg",
+      "alt": "Looking down a scrub-covered ridge over a wide valley floor",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMG/8QAIRAAAgAFBAMAAAAAAAAAAAAAAQIAAwQRIQUSIjJBYYH/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABkRAAIDAQAAAAAAAAAAAAAAAAABAgMSQf/aAAwDAQACEQMRAD8AdI1mnAN22rfiQLH7FTq1MT2v7JjNTFZl2huRyceIAtWBcO2QYmrZvgZR/9k="
+    },
+    {
+      "id": "longonot",
+      "file": "/photos/mt-longonot-summit-sign.jpg",
+      "alt": "The Mt Longonot summit sign, altitude 2,780 metres, above the Rift Valley",
+      "focus": "50% 55%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAF/8QAIhAAAgEDAgcAAAAAAAAAAAAAAQIAAwQhBREGEjJhcoHR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAXEQADAQAAAAAAAAAAAAAAAAAAARMC/9oADAMBAAIRAxEAPwCGulwSLXnAOc/YVuIaSHZbbHmZoVrZHyRse0K9opboB9Sa6GaP/9k="
+    },
+    {
+      "id": "forestPath",
+      "file": "/photos/forest-path-under-canopy.jpg",
+      "alt": "A red earth path through a tunnel of mossy trees",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQIG/8QAIBAAAgIBBQADAAAAAAAAAAAAAQIDBAAREiExQQVRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAAD/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AMxJPXlssZVKr5t8xOqsU9dWe4YiOApJOo++sn4iKvWleW3WWU7SN7c6H86w+zVkaw7RsEQklVGoAGShH//Z"
+    },
+    {
+      "id": "kingfisher",
+      "file": "/photos/pied-kingfisher-lakeside-fence.jpg",
+      "alt": "A pied kingfisher perched on an old concrete fence post by a lake",
+      "focus": "45% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgQFBv/EACIQAAIBAwIHAAAAAAAAAAAAAAECAwAEERJhFCEyM1Gx0f/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAZEQABBQAAAAAAAAAAAAAAAAAAARESE0H/2gAMAwEAAhEDEQA/AHRBHnrWjWGLHdA2PKsw9xbcS5RWA1BVPgY++qqRmxkXI0HdsZprH0CCH//Z"
+    },
+    {
+      "id": "muralWall",
+      "file": "/photos/beach-palms-mural-wall.jpg",
+      "alt": "Coconut palms over a painted beach wall, with a man standing at its foot",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQME/8QAIRAAAgICAgEFAAAAAAAAAAAAAQIDEQAEBRJBISJCUXH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAwDAQACEQMRAD8AK2NN5pZKVyViMpKqOw+v3JxI6IAHjjHhSbrN8vH8hNO0llLHX2miABXphuxobELhApFD5ecK0y//2Q=="
+    },
+    {
+      "id": "river",
+      "file": "/photos/brown-river-after-rain.jpg",
+      "alt": "A brown, full river between green banks under a blue sky",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAhEAACAgECBwAAAAAAAAAAAAABAgMRAAQhBRMUIjFxof/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAYEQACAwAAAAAAAAAAAAAAAAAAAQIDE//aAAwDAQACEQMRAD8AaSfh7qT1cQN0MGRNI7krrIK8d25+ZAsOnQryII0F7krZOKVQnZa9YO+QZo//2Q=="
+    },
+    {
+      "id": "lakeRocks",
+      "file": "/photos/lake-shore-rocks-headland.jpg",
+      "alt": "A calm lake with a hilly headland and rocks in the foreground",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAwQFBv/EACAQAAICAgICAwAAAAAAAAAAAAECAxEABCExBRITQaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFxEAAwEAAAAAAAAAAAAAAAAAABESQf/aAAwDAQACEQMRAD8Ao6e57tU0Hxiuw4YY8d+KOgEkbi7UcZkY12wCyTo6j7UX+djCL5GaqerHBxW9DJ//2Q=="
+    },
+    {
+      "id": "hillsideWater",
+      "file": "/photos/green-hillside-over-water.jpg",
+      "alt": "A bright green hillside rising straight out of choppy water",
+      "focus": "50% 50%",
+      "width": 960,
+      "height": 1280,
+      "blur": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECA//EACIQAAIBAwIHAAAAAAAAAAAAAAECAwARIQQSEzFBUXGBsf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAYEQACAwAAAAAAAAAAAAAAAAAAEQESFP/aAAwDAQACEQMRAD8AWmljAu821xi47Dpmp1ETiU8OaRlPIqQR9oVgTlFt4FbJIiiwUeloZ5bYLn//2Q=="
+    }
+  ]
+}

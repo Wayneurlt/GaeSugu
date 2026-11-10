@@ -1,18 +1,11 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import Photo from "./photo";
-import {
-  type Article,
-  type GaeEvent,
-  type Topic,
-  founders,
-  getCategory,
-  journey,
-  links,
-  whyNature,
-} from "@/lib/site";
+import { type Article, type GaeEvent, type Topic } from "@/lib/site";
+import { getSite } from "@/lib/site";
 
-export function Footer() {
+export async function Footer() {
+  const { links, settings } = await getSite();
   return (
     <footer id="contact" className="footer">
       <div className="container center stack-md">
@@ -32,7 +25,7 @@ export function Footer() {
           <a href={links.tiktok}>TikTok</a>
           <a href={links.youtube}>YouTube</a>
         </nav>
-        <span style={{ fontSize: 17, color: "#5A4A3C" }}>[email@gae.africa] · © 2026 Gae</span>
+        <span style={{ fontSize: 17, color: "#5A4A3C" }}>{settings.footer.note}</span>
       </div>
     </footer>
   );
@@ -93,7 +86,8 @@ export function TopicChips({ base, topics, active }: { base: string; topics: Top
   );
 }
 
-export function ArticleCard({ article }: { article: Article }) {
+export async function ArticleCard({ article }: { article: Article }) {
+  const { getCategory } = await getSite();
   const category = getCategory(article.category);
   const topic = category?.topics.find((t) => t.slug === article.topic);
   return (
@@ -164,21 +158,21 @@ export function EventList({ items }: { items: GaeEvent[] }) {
   );
 }
 
-export function WhyNature() {
+export async function WhyNature() {
+  const { whyNature, whyNatureIntro } = await getSite();
   return (
     <section className="container section why-nature">
       <div className="why-copy">
-        <span className="eyebrow terracotta">WHY NATURE</span>
-        <h2 className="display-md">In Africa, you cannot separate people from the land.</h2>
+        <span className="eyebrow terracotta">{whyNatureIntro.kicker}</span>
+        <h2 className="display-md">{whyNatureIntro.title}</h2>
         <p className="muted" style={{ margin: 0 }}>
-          When an animal or a forest disappears, a piece of our culture goes with it. So we document both: Jeff follows
-          the wildlife and biodiversity, and Naomi records the cultures that live around them.
+          {whyNatureIntro.text}
         </p>
-        <span className="hand terracotta">a Nat Geo for Africa, told by Africans</span>
+        <span className="hand terracotta">{whyNatureIntro.hand}</span>
       </div>
       <ul className="why-list">
-        {whyNature.map((w) => (
-          <li key={w.title}>
+        {whyNature.map((w, i) => (
+          <li key={i}>
             <span className="card-title">{w.title}</span>
             <span className="muted small">{w.text}</span>
           </li>
@@ -188,16 +182,17 @@ export function WhyNature() {
   );
 }
 
-export function Journey() {
+export async function Journey() {
+  const { journey, journeyIntro } = await getSite();
   return (
     <section className="container section stack-lg">
       <div className="section-head split">
-        <h2 className="display-sm">The journey</h2>
-        <span className="hand terracotta">one county at a time</span>
+        <h2 className="display-sm">{journeyIntro.title}</h2>
+        <span className="hand terracotta">{journeyIntro.hand}</span>
       </div>
       <ol className="route">
         {journey.map((j, i) => (
-          <li key={j.place} className={`stop${i === 0 ? " is-current" : ""}`}>
+          <li key={i} className={`stop${i === 0 ? " is-current" : ""}`}>
             <span className="stop-dot" aria-hidden="true" />
             <span className="kicker">{j.stage}</span>
             <span className="card-title-lg">{j.place}</span>
@@ -206,18 +201,18 @@ export function Journey() {
         ))}
       </ol>
       <div className="who">
-        <span className="kicker">ON THE ROAD WE SIT WITH</span>
-        <p className="who-list">Elders · Healers · Rainmakers · Artisans · Storytellers · Young people</p>
+        <span className="kicker">{journeyIntro.whoKicker}</span>
+        <p className="who-list">{journeyIntro.whoList}</p>
         <p className="muted" style={{ margin: 0 }}>
-          We interview them, photograph their communities and the wildlife around them, and keep proper records of
-          artefacts and indigenous knowledge.
+          {journeyIntro.whoText}
         </p>
       </div>
     </section>
   );
 }
 
-export function Founders({ withHeading = true }: { withHeading?: boolean }) {
+export async function Founders({ withHeading = true }: { withHeading?: boolean }) {
+  const { founders } = await getSite();
   return (
     <section className="container mid founders">
       {withHeading && (
@@ -226,7 +221,7 @@ export function Founders({ withHeading = true }: { withHeading?: boolean }) {
         </div>
       )}
       {founders.map((f, i) => (
-        <div key={f.name} className={`founder${i > 0 ? " divided" : ""}`}>
+        <div key={i} className={`founder${i > 0 ? " divided" : ""}`}>
           <Photo id={f.photo} decorative className="founder-photo" sizes="200px" style={{ background: f.bg }} />
           <div className="founder-body">
             <span className="card-title-xl">{f.name}</span>
@@ -244,38 +239,40 @@ export function Founders({ withHeading = true }: { withHeading?: boolean }) {
   );
 }
 
-export function NewsletterBlock() {
+export async function NewsletterBlock() {
+  const { settings } = await getSite();
   return (
     <section className="newsletter">
       <div className="container newsletter-inner">
-        <h2 className="newsletter-title">STORIES FROM HOME, IN YOUR INBOX</h2>
-        <p className="newsletter-text">New articles, photo essays and event invites from across Kenya. Free, once a month.</p>
+        <h2 className="newsletter-title">{settings.newsletterBlock.title}</h2>
+        <p className="newsletter-text">{settings.newsletterBlock.text}</p>
         <form className="newsletter-form">
           <label htmlFor="email" className="sr-only">
             Email address
           </label>
           <input id="email" type="email" placeholder="Your email address" />
-          <button type="button">SIGN UP</button>
+          <button type="button">{settings.newsletterBlock.button}</button>
         </form>
       </div>
     </section>
   );
 }
 
-export function SupportBlock() {
+export async function SupportBlock() {
+  const { links, settings } = await getSite();
   return (
     <section className="bg-terracotta">
       <div className="container mid center stack-md support">
-        <h2 className="display-lg">Help us keep the record.</h2>
+        <h2 className="display-lg">{settings.supportBlock.title}</h2>
         <p className="lead" style={{ maxWidth: 620 }}>
-          Every trip, interview and photograph is made possible by people like you.
+          {settings.supportBlock.text}
         </p>
         <div className="support-cta">
           <a href={links.buyMeACoffee} className="btn btn-white">
-            BUY US A COFFEE
+            {settings.supportBlock.coffeeButton}
           </a>
           <Link href="/support#donate" className="btn btn-outline-white">
-            DONATE
+            {settings.supportBlock.donateButton}
           </Link>
         </div>
       </div>
@@ -328,5 +325,26 @@ export function ContactForm({ topic = "story", extra }: { topic?: ContactTopic; 
         SEND
       </button>
     </form>
+  );
+}
+
+/**
+ * Renders article text written in the admin. Blank lines separate paragraphs,
+ * a line starting "## " is a subheading and one starting "> " is a quote.
+ */
+export function Prose({ text }: { text: string }) {
+  const blocks = text
+    .replace(/\r\n?/g, "\n")
+    .split(/\n\s*\n/)
+    .map((b) => b.trim())
+    .filter(Boolean);
+  return (
+    <>
+      {blocks.map((block, i) => {
+        if (block.startsWith("## ")) return <h2 key={i}>{block.slice(3)}</h2>;
+        if (block.startsWith("> ")) return <blockquote key={i}>{block.replace(/^> ?/gm, "")}</blockquote>;
+        return <p key={i}>{block}</p>;
+      })}
+    </>
   );
 }

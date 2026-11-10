@@ -1,0 +1,251 @@
+{
+  "categories": [
+    {
+      "slug": "animals-nature",
+      "label": "Animals & Nature",
+      "tagline": "the land we cannot be separated from",
+      "intro": "Wildlife, plants and sacred places, and the beliefs around them. When an animal or a forest disappears, a piece of our culture goes with it.",
+      "color": "#B7C7A8",
+      "topics": [
+        {
+          "slug": "wildlife",
+          "label": "Wildlife",
+          "intro": "The animals of each place we visit, documented by Jeff."
+        },
+        {
+          "slug": "sacred-nature",
+          "label": "Sacred Nature",
+          "intro": "Animals, plants and places once honoured, later feared. What is myth, and what carries real meaning?"
+        },
+        {
+          "slug": "plants-healing",
+          "label": "Plants & Healing",
+          "intro": "Plants healers know by name and use."
+        },
+        {
+          "slug": "ecosystems-landscapes",
+          "label": "Ecosystems & Landscapes",
+          "intro": "Forests, rivers, hills and plains, and the life they hold."
+        },
+        {
+          "slug": "endangered-species",
+          "label": "Endangered Species",
+          "intro": "Animals and plants we are at risk of losing, and why they matter."
+        },
+        {
+          "slug": "sacred-places",
+          "label": "Sacred Places",
+          "intro": "Groves, hills, rivers and trees held sacred."
+        }
+      ]
+    },
+    {
+      "slug": "history-culture",
+      "label": "History & Culture",
+      "tagline": "the pieces we are picking back up",
+      "intro": "Traditions, ceremonies, languages and the voices of elders, healers, rainmakers and artisans, recorded so they are not lost.",
+      "color": "#E2C2B2",
+      "topics": [
+        {
+          "slug": "traditions-ceremonies",
+          "label": "Traditions & Ceremonies",
+          "intro": "Rites, gatherings and the meaning behind them."
+        },
+        {
+          "slug": "oral-history",
+          "label": "Oral History & Voices",
+          "intro": "Interviews with elders, healers, rainmakers and artisans."
+        },
+        {
+          "slug": "heritage-sites",
+          "label": "Heritage Sites",
+          "intro": "Places that hold our history."
+        },
+        {
+          "slug": "folklore-music-food",
+          "label": "Folklore, Music & Food",
+          "intro": "What we sing, tell and eat together."
+        },
+        {
+          "slug": "languages",
+          "label": "Languages",
+          "intro": "Words, sayings and names, and what they carry."
+        },
+        {
+          "slug": "crafts-artisans",
+          "label": "Crafts & Artisans",
+          "intro": "Skills passed down by hand, and the people who keep them."
+        },
+        {
+          "slug": "roots-identity",
+          "label": "Roots & Identity",
+          "intro": "Essays on what it means to be African today."
+        }
+      ]
+    },
+    {
+      "slug": "travel",
+      "label": "Travel",
+      "tagline": "one county at a time",
+      "intro": "Field notes from the road: Kajiado first, then western Kenya, then the rest of Kenya and Africa.",
+      "color": "#EBD9B4",
+      "topics": [
+        {
+          "slug": "field-notes",
+          "label": "Field Notes by County",
+          "intro": "What we saw, heard and learned in each county."
+        },
+        {
+          "slug": "destination-guides",
+          "label": "Destination Guides",
+          "intro": "Where to go, and how to go respectfully."
+        },
+        {
+          "slug": "villages-homestays",
+          "label": "Villages & Homestays",
+          "intro": "Staying with communities, not just passing through."
+        },
+        {
+          "slug": "green-travel",
+          "label": "Green Travel",
+          "intro": "Travelling lightly on the land."
+        }
+      ]
+    },
+    {
+      "slug": "wellness",
+      "label": "Wellness",
+      "tagline": "living well, the old way",
+      "intro": "Food from the land, movement in nature, rest, and traditional healing.",
+      "color": "#D6DFC4",
+      "topics": [
+        {
+          "slug": "living-well",
+          "label": "Living Well",
+          "intro": "Everyday ways our communities stay well."
+        },
+        {
+          "slug": "food-nutrition",
+          "label": "Food & Nutrition",
+          "intro": "Indigenous foods and how they are prepared."
+        },
+        {
+          "slug": "movement-in-nature",
+          "label": "Movement in Nature",
+          "intro": "Walking, working and moving through the land."
+        },
+        {
+          "slug": "traditional-healing",
+          "label": "Traditional Healing",
+          "intro": "Healers, their knowledge and their practice."
+        }
+      ]
+    },
+    {
+      "slug": "sustainability",
+      "label": "Sustainability",
+      "tagline": "caring for the land that keeps us",
+      "intro": "Conservation, climate and the community projects protecting forests, rivers and wildlife.",
+      "color": "#BFD8C8",
+      "topics": [
+        {
+          "slug": "conservation",
+          "label": "Conservation",
+          "intro": "Communities protecting forests, rivers and wildlife."
+        },
+        {
+          "slug": "climate-land",
+          "label": "Climate & Land",
+          "intro": "How traditional knowledge cares for the land."
+        },
+        {
+          "slug": "community-projects",
+          "label": "Community Projects",
+          "intro": "Tree planting, clean-ups and projects we support."
+        }
+      ]
+    },
+    {
+      "slug": "diaspora",
+      "label": "Black & African Diaspora",
+      "tagline": "finding the way home",
+      "intro": "For Black Americans, Caribbeans and Africans around the world finding their way home.",
+      "color": "#F1DFD3",
+      "topics": [
+        {
+          "slug": "diaspora-voices",
+          "label": "Diaspora Voices",
+          "intro": "Journeys of reconnection, in their own words."
+        },
+        {
+          "slug": "finding-your-roots",
+          "label": "Finding Your Roots",
+          "intro": "Where to begin tracing your African heritage."
+        },
+        {
+          "slug": "names-meanings",
+          "label": "Names & Meanings",
+          "intro": "The stories carried in African names."
+        },
+        {
+          "slug": "learn-a-language",
+          "label": "Learn a Language",
+          "intro": "First words in the languages of home."
+        },
+        {
+          "slug": "coming-home",
+          "label": "Coming Home",
+          "intro": "Returning to Africa, with respect and purpose."
+        }
+      ]
+    },
+    {
+      "slug": "photography",
+      "label": "Photography",
+      "tagline": "through our lens",
+      "intro": "Communities, wildlife, ceremonies and landscapes, photographed on the road.",
+      "color": "#C9DCE3",
+      "topics": [
+        {
+          "slug": "photo-of-the-week",
+          "label": "Photo of the Week",
+          "intro": "One photograph and the story behind it."
+        },
+        {
+          "slug": "galleries",
+          "label": "Galleries",
+          "intro": "Collections from each place we visit."
+        },
+        {
+          "slug": "photo-essays",
+          "label": "Photo Essays",
+          "intro": "Stories told mostly in pictures."
+        }
+      ]
+    },
+    {
+      "slug": "events",
+      "label": "Events",
+      "tagline": "come and gather with us",
+      "intro": "Exhibitions, nature walks, storytelling evenings and essay competitions.",
+      "color": "#E8D3B8",
+      "topics": [
+        {
+          "slug": "upcoming",
+          "label": "Upcoming Events",
+          "intro": "Everything coming up."
+        },
+        {
+          "slug": "exhibitions",
+          "label": "Exhibitions",
+          "intro": "Photo exhibitions from the archive."
+        },
+        {
+          "slug": "competitions-clubs",
+          "label": "Essay Competitions & Clubs",
+          "intro": "For schools and young writers."
+        }
+      ]
+    }
+  ]
+}

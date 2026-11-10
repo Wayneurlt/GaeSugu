@@ -1,0 +1,26 @@
+{
+  "siteTitle": "Gae Sugu",
+  "siteDescription": "Gae is a broken piece of a pot. We gather the scattered pieces of African knowledge, starting in Kenya, into a living digital archive rooted in nature.",
+  "links": {
+    "buyMeACoffee": "https://www.buymeacoffee.com/[your-page]",
+    "donate": "[Donation link, e.g. M-Pesa paybill or PayPal]",
+    "youtube": "https://www.youtube.com/@[your-channel]",
+    "instagram": "https://www.instagram.com/[your-handle]",
+    "tiktok": "https://www.tiktok.com/@[your-handle]"
+  },
+  "email": "[hello@your-domain]",
+  "footer": {
+    "note": "[email@gae.africa] · © 2026 Gae"
+  },
+  "newsletterBlock": {
+    "title": "STORIES FROM HOME, IN YOUR INBOX",
+    "text": "New articles, photo essays and event invites from across Kenya. Free, once a month.",
+    "button": "SIGN UP"
+  },
+  "supportBlock": {
+    "title": "Help us keep the record.",
+    "text": "Every trip, interview and photograph is made possible by people like you.",
+    "coffeeButton": "BUY US A COFFEE",
+    "donateButton": "DONATE"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "about": {
+    "title": "A gae is a broken piece of a pot.",
+    "paragraphs": [
+      "We thought that is how African knowledge feels right now: fragmented and scattered everywhere, with bits of our stories, languages and traditions disappearing quietly.",
+      "Gae is our attempt to pick those pieces back up and put them together in a living digital archive, so they are not lost for good.",
+      "We interview elders, healers, rainmakers and artisans; photograph communities and wildlife; keep proper records of artefacts and indigenous knowledge; and dig into African beliefs, like why some animals are seen as bad omens, to work out what is myth and what carries real meaning."
+    ],
+    "ethicsTitle": "Our ethics"
+  },
+  "founders": {
+    "title": "Our Founders",
+    "hand": "a brother and sister on the road",
+    "intro": "Jeff documents the wildlife and biodiversity; Naomi documents the cultures that live around them. Together they are starting in Kajiado, then heading to western Kenya, where their own roots are."
+  },
+  "articles": {
+    "title": "Articles",
+    "hand": "field notes from the road",
+    "intro": "Field notes, interviews and essays from each county we visit, about the land and the people who live with it."
+  },
+  "archive": {
+    "title": "The Archive",
+    "hand": "picking the pieces back up",
+    "intro": "A gae is a broken piece of a pot. This is where we keep every piece we find: voices, photographs, journals, artefacts and indigenous knowledge, so they are not lost for good.",
+    "collections": [
+      {
+        "title": "Voices",
+        "text": "Recorded interviews with elders, healers, rainmakers and artisans.",
+        "photo": "boatman",
+        "href": "/history-culture/oral-history",
+        "bg": "#E2C2B2"
+      },
+      {
+        "title": "Photographs",
+        "text": "Communities, ceremonies, wildlife and landscapes.",
+        "photo": "egret",
+        "href": "/photography",
+        "bg": "#C9DCE3"
+      },
+      {
+        "title": "Journals",
+        "text": "Our field journals, county by county.",
+        "photo": "longonot",
+        "href": "/travel/field-notes",
+        "bg": "#EBD9B4"
+      },
+      {
+        "title": "Artefacts",
+        "text": "Proper records of objects: what they are, who made them and how they are used.",
+        "photo": "dugoutCanoes",
+        "href": "/artefacts",
+        "bg": "#E8D3B8"
+      },
+      {
+        "title": "Indigenous knowledge",
+        "text": "Plants, seasons, sky and land, as taught by those who know.",
+        "photo": "sausageTree",
+        "href": "/animals-nature/plants-healing",
+        "bg": "#B7C7A8"
+      },
+      {
+        "title": "Beliefs & omens",
+        "text": "What our communities believe about animals and places, and why.",
+        "photo": "mossForest",
+        "href": "/animals-nature/sacred-nature",
+        "bg": "#C9D6B8"
+      }
+    ],
+    "addTitle": "Add a piece",
+    "addText": "Do you know an elder with stories to tell, an object with a history, or a belief worth explaining? We would love to hear from you. Everything is recorded with consent, and credited to the people who share it."
+  },
+  "videos": {
+    "title": "Videos",
+    "hand": "from the road",
+    "intro": "Interviews with elders, healers and rainmakers, and films of the places we visit.",
+    "items": [
+      {
+        "title": "[Video title: Kajiado pilot trip]",
+        "photo": "riftView",
+        "href": "https://www.youtube.com/@[your-channel]"
+      },
+      {
+        "title": "[Video title: interview]",
+        "photo": "boatman",
+        "href": "https://www.youtube.com/@[your-channel]"
+      },
+      {
+        "title": "[Video title: wildlife]",
+        "photo": "kingfisher",
+        "href": "https://www.youtube.com/@[your-channel]"
+      }
+    ]
+  },
+  "support": {
+    "title": "Help us keep the record.",
+    "hand": "every piece counts",
+    "intro": "Every trip, interview and photograph is made possible by people like you.",
+    "coffeeTitle": "Buy us a coffee",
+    "coffeeText": "A small thank-you that keeps us going on the road.",
+    "donateTitle": "Donate",
+    "donateText": "Fund a trip, an interview or a piece of the archive. [Add M-Pesa, PayPal or bank details.]",
+    "usesTitle": "Where your support goes",
+    "uses": [
+      {
+        "title": "Getting there",
+        "text": "Fuel and transport to reach communities, starting with Kajiado."
+      },
+      {
+        "title": "Recording",
+        "text": "Audio, camera and storage so interviews and photographs are kept properly."
+      },
+      {
+        "title": "Giving back",
+        "text": "Thanking the people who share their knowledge, and returning copies to them."
+      },
+      {
+        "title": "Keeping it online",
+        "text": "Hosting the archive so it stays free for everyone."
+      }
+    ]
+  },
+  "explore": {
+    "title": "Africa, piece by piece.",
+    "hand": "and we begin at home",
+    "intro": "Our first journey starts in Kajiado, near home, and then goes on to western Kenya, where our roots are.",
+    "eastAfricaTitle": "East Africa · where we begin",
+    "regionsTitle": "The rest of the pot",
+    "regionsHand": "coming, one journey at a time"
+  },
+  "artefacts": {
+    "title": "Artefacts",
+    "hand": "objects that carry memory",
+    "intro": "Proper records of objects: what they are, who made them and how they are used.",
+    "recordTitle": "What we record for every object",
+    "record": [
+      {
+        "title": "What it is",
+        "text": "Its name in the local language, what it is made of and how it is made."
+      },
+      {
+        "title": "Who made it",
+        "text": "The maker, the community and the county, credited by name where they agree."
+      },
+      {
+        "title": "How it is used",
+        "text": "Everyday use, ceremonies, and the stories and beliefs around it."
+      },
+      {
+        "title": "With consent",
+        "text": "We only photograph and publish what the owners are happy to share."
+      }
+    ]
+  },
+  "contribute": {
+    "title": "Contribute to Gae",
+    "hand": "add your piece to the pot",
+    "intro": "Photographers, writers, researchers and knowledge-holders: share a story or photograph with us.",
+    "wantedTitle": "What we are looking for",
+    "wanted": [
+      {
+        "title": "Photographs",
+        "text": "Communities, ceremonies, wildlife and landscapes, with a line on who, where and when."
+      },
+      {
+        "title": "Stories & essays",
+        "text": "Field notes, family histories, and essays on identity and belonging."
+      },
+      {
+        "title": "Research",
+        "text": "Work on languages, plants, sacred sites, beliefs and oral history."
+      },
+      {
+        "title": "Knowledge",
+        "text": "Are you an elder, healer, rainmaker or artisan? We would love to sit and listen."
+      }
+    ],
+    "ethicsTitle": "How we work with you",
+    "creditTitle": "YOU KEEP THE CREDIT",
+    "creditText": "Everything we publish carries your name, and you can ask us to take it down at any time."
+  },
+  "contact": {
+    "title": "Contact",
+    "hand": "karibu, say hello",
+    "intro": "Share a story, suggest a place we should visit, invite us to an event, or ask about working together."
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "hand": "stories from home",
+    "intro": "Once a month: new articles, photo essays, the photo of the week and invites to our events. Free, and you can leave any time."
+  },
+  "events": {
+    "partnerTitle": "Host or partner with us",
+    "partnerText": "Schools, community groups and organisations can invite us for an exhibition, a talk or an essay club."
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "hero": {
+    "photo": "hillsideWater"
+  },
+  "intro": {
+    "title": "A living archive of Africa.",
+    "pronunciation": "Gae /[pronunciation]/",
+    "meaning": "a broken piece of a pot, in [language]",
+    "paragraphs": [
+      "African knowledge is like a broken pot: fragmented, scattered, with pieces of our stories, languages and traditions slowly being lost. Gae is our way of gathering those pieces back together, so they are never lost again.",
+      "We travel across Africa, starting in Kenya, to sit with elders, healers, rainmakers and artisans, to photograph communities and wildlife, and to keep records of artefacts and indigenous knowledge."
+    ],
+    "welcome": "Karibu Gae.",
+    "welcomeBold": "Karibu nyumbani."
+  },
+  "explore": {
+    "kicker": "EXPLORE AFRICA",
+    "titleFirstLine": "Africa,",
+    "titleItalicWord": "piece",
+    "titleRest": "by piece.",
+    "hand": "and we begin at home",
+    "text": "Our first journey starts in Kajiado, near home, and then goes on to western Kenya, where our roots are.",
+    "backgroundPhoto": "grassHillside"
+  },
+  "regions": {
+    "title": "The rest of the pot",
+    "hand": "coming, one journey at a time"
+  },
+  "culture": {
+    "title": "Culture & Heritage",
+    "hand": "the stories, traditions and knowledge we keep",
+    "cards": [
+      {
+        "title": "Traditions & Ceremonies",
+        "text": "Rites, gatherings and the meaning behind them.",
+        "photo": "coastVillage",
+        "href": "/history-culture/traditions-ceremonies",
+        "bg": "#E8D3B8"
+      },
+      {
+        "title": "Elders, Healers & Rainmakers",
+        "text": "Raw stories, in their own words.",
+        "photo": "sausageTree",
+        "href": "/history-culture/oral-history",
+        "bg": "#E2C2B2"
+      },
+      {
+        "title": "Folklore, Music & Food",
+        "text": "What we sing, tell and eat together.",
+        "photo": "muralWall",
+        "href": "/history-culture/folklore-music-food",
+        "bg": "#EBD9B4"
+      },
+      {
+        "title": "Languages, Crafts & Artisans",
+        "text": "Words and skills passed down by hand.",
+        "photo": "dugoutCanoes",
+        "href": "/history-culture/crafts-artisans",
+        "bg": "#D6DFC4"
+      }
+    ]
+  },
+  "myths": {
+    "kicker": "[CULTURE & HERITAGE · MYTHS OR MEANING?]",
+    "title": "Myth, or meaning?",
+    "text": "African beliefs about animals, plants and places that were feared, dismissed or misunderstood. We go back to the communities who hold them and ask what they really mean.",
+    "quote": "“What the elders honoured, we were taught to fear.”",
+    "cards": [
+      {
+        "title": "The owl",
+        "text": "A bad omen, or a messenger? What the elders say.",
+        "href": "/articles/the-owl-omen-or-messenger"
+      },
+      {
+        "title": "The rainmaker",
+        "text": "How communities read the sky and the seasons.",
+        "href": "/articles/what-rainmakers-read"
+      },
+      {
+        "title": "The hyena",
+        "text": "Feared in folklore, yet part of the balance of the land.",
+        "href": "/articles/hares-and-hyenas"
+      }
+    ]
+  },
+  "identity": {
+    "photo": "coastVillage",
+    "kicker": "CULTURE & HERITAGE · WHO ARE WE?",
+    "title": "Who are we when we tell our own story?",
+    "text": "Essays on African identity: names, language, faith, dress, memory, and what it means to be African today.",
+    "signature": "Naomi",
+    "linkText": "Read: [First essay title]",
+    "linkHref": "/history-culture/roots-identity"
+  },
+  "biodiversity": {
+    "title": "Biodiversity & Conservation",
+    "hand": "where people and nature meet",
+    "text": "In Africa, people and the land cannot be separated. Clans have animal totems, trees are sacred, and healers know plants most of us have never heard of. When an animal or a forest disappears, a piece of our culture goes with it.",
+    "spotlight": {
+      "kicker": "SPECIES SPOTLIGHT",
+      "name": "Vervet monkey",
+      "otherNames": "Chlorocebus pygerythrus · Tumbili (Swahili) · [Other local names]",
+      "text": "[Where it lives, why it matters, what threatens it, and what communities believe about it.]",
+      "photo": "vervet",
+      "href": "/articles/wildlife-of-kajiado"
+    },
+    "stories": [
+      {
+        "kicker": "WILDLIFE",
+        "title": "[Story title]",
+        "photo": "kingfisher",
+        "href": "/animals-nature/wildlife",
+        "bg": "#C9D6B8"
+      },
+      {
+        "kicker": "ECOSYSTEMS & SACRED SITES",
+        "title": "[Story title]",
+        "photo": "mossForest",
+        "href": "/animals-nature/sacred-places",
+        "bg": "#D6DFC4"
+      },
+      {
+        "kicker": "CONSERVATION STORIES",
+        "title": "[Story title]",
+        "photo": "river",
+        "href": "/sustainability/conservation",
+        "bg": "#BFD8C8"
+      }
+    ]
+  },
+  "diaspora": {
+    "title": "Black & African Diaspora",
+    "text": "For Black Americans, Caribbeans and Africans around the world finding their way home."
+  },
+  "archive": {
+    "title": "The Archive",
+    "hand": "everything we record, kept for the next generation",
+    "articlesTitle": "Articles & Essays",
+    "articles": [
+      {
+        "kicker": "FIELD NOTES · KAJIADO",
+        "title": "[Title of the first field story]",
+        "byline": "By [Name] | [X] mins",
+        "photo": "forestPath",
+        "href": "/articles/kajiado-first-trip",
+        "bg": "#D9D3C7"
+      },
+      {
+        "kicker": "INTERVIEW",
+        "title": "[Interview title]",
+        "byline": "By [Name] | [X] mins",
+        "photo": "boatman",
+        "href": "/history-culture/oral-history",
+        "bg": "#E8D3B8"
+      },
+      {
+        "kicker": "ESSAY",
+        "title": "[Essay title]",
+        "byline": "By [Name] | [X] mins",
+        "photo": "lonePalm",
+        "href": "/history-culture/roots-identity",
+        "bg": "#E2C2B2"
+      }
+    ],
+    "photographyTitle": "Photography",
+    "photoOfTheWeekLabel": "PHOTO OF THE WEEK",
+    "galleryStrip": [
+      {
+        "photo": "beachCrows",
+        "href": "/photography/gallery/coast-and-lakes"
+      },
+      {
+        "photo": "palmGrove",
+        "href": "/photography/gallery/coast-and-lakes"
+      },
+      {
+        "photo": "clearLake",
+        "href": "/photography/gallery/coast-and-lakes"
+      },
+      {
+        "photo": "hillsideWater",
+        "href": "/photography/gallery/wildlife-and-land"
+      }
+    ],
+    "documentariesTitle": "Documentaries",
+    "documentariesLinkText": "WATCH ON YOUTUBE",
+    "documentaries": [
+      {
+        "title": "[Documentary title]",
+        "photo": "lakeRocks",
+        "href": "/videos"
+      },
+      {
+        "title": "[Documentary title]",
+        "photo": "palmFence",
+        "href": "/videos"
+      }
+    ],
+    "artefactsTitle": "Artefacts"
+  },
+  "involved": {
+    "title": "Get Involved",
+    "eventsTitle": "EVENTS WE HOST",
+    "events": [
+      {
+        "day": "[DD]",
+        "month": "[MON]",
+        "kicker": "[EVENT TYPE]",
+        "title": "[Event name]",
+        "meta": "[Place] · [Time]",
+        "buttonText": "REGISTER",
+        "href": "/contact?topic=event"
+      },
+      {
+        "day": "•",
+        "month": "ONGOING",
+        "kicker": "COMPETITIONS & CLUBS",
+        "title": "[Competition theme]",
+        "meta": "Online and in schools",
+        "buttonText": "JOIN",
+        "href": "/events/competitions-clubs"
+      }
+    ],
+    "contributeTitle": "Contribute to Gae",
+    "contributeText": "Photographers, writers, researchers and knowledge-holders: share a story or photograph with us.",
+    "contributeButton": "SUBMIT YOUR WORK"
+  },
+  "newsletter": {
+    "title": "STORIES FROM HOME, IN YOUR INBOX",
+    "text": "New stories, photographs and event invites from across Africa. Free, once a month.",
+    "button": "SIGN UP"
+  },
+  "about": {
+    "title": "About Gae",
+    "foundersTitle": "OUR FOUNDERS · IN HONOUR OF OUR DAD",
+    "ethicsTitle": "OUR ETHICS"
+  },
+  "support": {
+    "title": "Help us gather the pieces.",
+    "text": "Every trip, interview and photograph is made possible by people like you.",
+    "coffeeButton": "BUY US A COFFEE",
+    "donateButton": "DONATE"
+  }
+}

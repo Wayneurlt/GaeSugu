@@ -1,0 +1,103 @@
+{
+  "missionVision": [
+    {
+      "kicker": "MISSION",
+      "text": "To document, preserve and share Africa’s cultures, histories, indigenous knowledge and biodiversity through respectful storytelling, so that what our communities know is never lost."
+    },
+    {
+      "kicker": "VISION",
+      "text": "A living archive where every African, at home and in the diaspora, can find the pieces of who they are."
+    }
+  ],
+  "ethics": [
+    {
+      "kicker": "CONSENT FIRST",
+      "text": "We only record and share what people agree to share."
+    },
+    {
+      "kicker": "STORIES BELONG TO THEIR PEOPLE",
+      "text": "We credit every voice and share our work back with communities."
+    },
+    {
+      "kicker": "LOCAL FIRST",
+      "text": "We stay, eat, hire and buy locally wherever we go."
+    },
+    {
+      "kicker": "LIGHT FOOTPRINT",
+      "text": "We document places without harming the people or land we meet."
+    }
+  ],
+  "founders": [
+    {
+      "name": "Naomi",
+      "role": "Co-founder · Culture, Roots & Identity",
+      "bio": "Naomi documents the cultures that live around the land: the beliefs, languages, ceremonies and stories of the communities we visit. [Add a few lines in your own words: who you are and why Gae matters to you.]",
+      "photo": "muralWall",
+      "bg": "#E2C2B2"
+    },
+    {
+      "name": "Jeff",
+      "role": "Co-founder · Wildlife & Biodiversity",
+      "bio": "Jeff follows the wildlife and biodiversity in each place we visit, because when an animal or a forest disappears, a piece of our culture goes with it. [Add a few lines in Jeff’s own words.]",
+      "photo": "kingfisher",
+      "bg": "#C9D6B8"
+    }
+  ],
+  "journey": [
+    {
+      "stage": "PILOT · STARTING NOW",
+      "place": "Kajiado",
+      "text": "Close to home: where we learn how to listen and record well."
+    },
+    {
+      "stage": "NEXT",
+      "place": "Western Kenya",
+      "text": "Where our own identity and roots are."
+    },
+    {
+      "stage": "THEN",
+      "place": "All of Kenya",
+      "text": "Every county, every community willing to share."
+    },
+    {
+      "stage": "THE DREAM",
+      "place": "Africa",
+      "text": "The rest of the continent, piece by piece."
+    }
+  ],
+  "whyNature": [
+    {
+      "title": "Animal totems",
+      "text": "Clans are named for, and bound to, the animals that protect them."
+    },
+    {
+      "title": "Hares and hyenas",
+      "text": "Our folktales teach through the creatures we live beside."
+    },
+    {
+      "title": "Sacred trees",
+      "text": "Certain trees and groves are places of prayer and gathering."
+    },
+    {
+      "title": "Rainmakers",
+      "text": "Those who read the sky, the wind and the birds for the coming season."
+    },
+    {
+      "title": "Healers’ plants",
+      "text": "Medicines most of us have never heard of, known by name and use."
+    }
+  ],
+  "whyNatureIntro": {
+    "kicker": "WHY NATURE",
+    "title": "In Africa, you cannot separate people from the land.",
+    "text": "When an animal or a forest disappears, a piece of our culture goes with it. So we document both: Jeff follows the wildlife and biodiversity, and Naomi records the cultures that live around them.",
+    "hand": "a Nat Geo for Africa, told by Africans"
+  },
+  "journeyIntro": {
+    "title": "The journey",
+    "hand": "one county at a time",
+    "whoKicker": "ON THE ROAD WE SIT WITH",
+    "whoList": "Elders · Healers · Rainmakers · Artisans · Storytellers · Young people",
+    "whoText": "We interview them, photograph their communities and the wildlife around them, and keep proper records of artefacts and indigenous knowledge."
+  }
+}

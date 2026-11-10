@@ -1,0 +1,106 @@
+{
+  "photoOfTheWeek": {
+    "photo": "egret",
+    "title": "[Photo title]",
+    "text": "[Two or three sentences about who or what is in the photo, where it was taken, and the story behind it.]",
+    "county": "[County]"
+  },
+  "galleries": [
+    {
+      "slug": "kajiado-pilot",
+      "title": "Kajiado: the pilot trip",
+      "county": "Kajiado",
+      "kind": "gallery",
+      "colors": [
+        "#D9D3C7",
+        "#C9D6B8",
+        "#E2C2B2",
+        "#C9DCE3",
+        "#EBD9B4",
+        "#B7C7A8"
+      ],
+      "photos": [
+        "riftView",
+        "grassHillside",
+        "lonePalm",
+        "forestPath",
+        "river",
+        "sausageTree",
+        "vervet"
+      ]
+    },
+    {
+      "slug": "faces-of-the-elders",
+      "title": "[Photo essay title]",
+      "county": "[County]",
+      "kind": "photo-essay",
+      "colors": [
+        "#E2C2B2",
+        "#D9D3C7",
+        "#E8D3B8",
+        "#C9D6B8"
+      ],
+      "photos": [
+        "boatman",
+        "muralWall",
+        "coastVillage",
+        "dugoutCanoes",
+        "beachCrows"
+      ]
+    },
+    {
+      "slug": "wildlife-and-land",
+      "title": "[Gallery title: wildlife and land]",
+      "county": "[County]",
+      "kind": "gallery",
+      "colors": [
+        "#B7C7A8",
+        "#BFD8C8",
+        "#C9DCE3",
+        "#D6DFC4"
+      ],
+      "photos": [
+        "kingfisher",
+        "egret",
+        "vervet",
+        "sausageTree",
+        "mossBark",
+        "mossForest",
+        "grassHillside",
+        "gantryCranes",
+        "hillsideWater"
+      ]
+    },
+    {
+      "slug": "coast-and-lakes",
+      "title": "[Gallery title: coast and lakes]",
+      "county": "[County]",
+      "kind": "gallery",
+      "colors": [
+        "#C9DCE3",
+        "#EBD9B4",
+        "#D9D3C7",
+        "#BFD8C8"
+      ],
+      "photos": [
+        "palmFence",
+        "beachCrows",
+        "palmGrove",
+        "muralWall",
+        "coastVillage",
+        "clearLake",
+        "lakeRocks",
+        "dugoutCanoes",
+        "boatman"
+      ]
+    }
+  ],
+  "pastWeeks": [
+    "beachCrows",
+    "kingfisher",
+    "clearLake",
+    "longonot",
+    "palmFence",
+    "hillsideWater"
+  ]
+}

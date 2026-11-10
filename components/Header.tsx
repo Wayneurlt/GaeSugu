@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
-import Photo from "./photo";
-import { navSections } from "@/lib/nav";
+import { PhotoFrame } from "./photo-frame";
+import type { NavSection } from "@/lib/nav";
 
-export default function Header() {
+/** Site header and slide-out menu. The server layout passes in the menu content. */
+export default function Header({ sections, coffeeHref }: { sections: NavSection[]; coffeeHref: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openSection, setOpenSection] = useState<string | null>(null);
+  const [openSection, setOpenSection] = useState<number | null>(null);
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -71,15 +72,15 @@ export default function Header() {
             </div>
 
             <nav aria-label="Main" className="menu-nav">
-              {navSections.map((s) => {
-                const open = openSection === s.id;
+              {sections.map((s, index) => {
+                const open = openSection === index;
                 return (
-                  <div key={s.id} className="menu-section">
+                  <div key={index} className="menu-section">
                     <button
                       type="button"
                       className="menu-toggle"
                       aria-expanded={open}
-                      onClick={() => setOpenSection(open ? null : s.id)}
+                      onClick={() => setOpenSection(open ? null : index)}
                     >
                       <span>{s.label}</span>
                       <span className={`chevron-wrap${open ? " is-open" : ""}`}>
@@ -90,7 +91,7 @@ export default function Header() {
                     </button>
                     {open && (
                       <div className="menu-panel">
-                        {s.children.map((c) => (
+                        {s.links.map((c) => (
                           <Link key={c.label} href={c.href} onClick={closeMenu} className="menu-link">
                             {c.label}
                           </Link>
@@ -103,7 +104,7 @@ export default function Header() {
                             <span className="menu-latest-label">Latest—</span>
                             {s.latest.map((l, i) => (
                               <Link key={i} href={l.href} onClick={closeMenu} className="menu-latest">
-                                <Photo id={l.photo} decorative className="menu-thumb" sizes="120px" style={{ background: l.color }} />
+                                <PhotoFrame photo={l.photo} decorative className="menu-thumb" sizes="120px" style={{ background: l.color }} />
                                 <span className="menu-latest-title">{l.title}</span>
                               </Link>
                             ))}
@@ -117,10 +118,10 @@ export default function Header() {
             </nav>
 
             <div className="menu-cta">
-              <Link href="/support" onClick={closeMenu} className="btn btn-solid">
+              <a href={coffeeHref} className="btn btn-solid">
                 BUY US A COFFEE
-              </Link>
-              <Link href="/support" onClick={closeMenu} className="btn btn-outline">
+              </a>
+              <Link href="/support#donate" onClick={closeMenu} className="btn btn-outline">
                 DONATE
               </Link>
             </div>

@@ -1,0 +1,65 @@
+{
+  "regions": [
+    {
+      "slug": "west-africa",
+      "name": "West Africa",
+      "text": "Sahel, old kingdoms and the coast",
+      "bg": "#C9B08A",
+      "photo": "lonePalm"
+    },
+    {
+      "slug": "central-africa",
+      "name": "Central Africa",
+      "text": "The forests of the Congo Basin",
+      "bg": "#9FB28E",
+      "photo": "forestPath"
+    },
+    {
+      "slug": "southern-africa",
+      "name": "Southern Africa",
+      "text": "Deserts, deltas and rock art",
+      "bg": "#C49A82",
+      "photo": "riftView"
+    },
+    {
+      "slug": "north-africa",
+      "name": "North Africa",
+      "text": "The Sahara, the Nile and the Atlas",
+      "bg": "#D4BE96",
+      "photo": "river"
+    },
+    {
+      "slug": "indian-ocean-islands",
+      "name": "Indian Ocean Islands",
+      "text": "Madagascar, Mauritius and beyond",
+      "bg": "#A9C1C6",
+      "photo": "palmGrove"
+    }
+  ],
+  "artefacts": [
+    {
+      "slug": "artefact-1",
+      "name": "[Artefact name]",
+      "community": "[Community]",
+      "county": "[County]",
+      "text": "[What it is, who made it, and how it is used.]",
+      "photo": "dugoutCanoes"
+    },
+    {
+      "slug": "artefact-2",
+      "name": "[Artefact name]",
+      "community": "[Community]",
+      "county": "[County]",
+      "text": "[What it is, who made it, and how it is used.]",
+      "photo": "gantryCranes"
+    },
+    {
+      "slug": "artefact-3",
+      "name": "[Artefact name]",
+      "community": "[Community]",
+      "county": "[County]",
+      "text": "[What it is, who made it, and how it is used.]",
+      "photo": "mossBark"
+    }
+  ]
+}

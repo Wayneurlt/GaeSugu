@@ -1,7 +1,14 @@
 import Link from "next/link";
+import Header from "@/components/Header";
+import { Footer } from "@/components/blocks";
+import { getSite } from "@/lib/site";
 
-export default function NotFound() {
+export default async function NotFound() {
+  const { navSections, links } = await getSite();
   return (
+    <>
+      <Header sections={navSections} coffeeHref={links.buyMeACoffee} />
+      <main>
     <section className="container mid section center stack-md">
       <span className="hand terracotta">a missing piece</span>
       <h1 className="display-lg">We could not find that page.</h1>
@@ -12,5 +19,8 @@ export default function NotFound() {
         BACK HOME
       </Link>
     </section>
+      </main>
+      <Footer />
+    </>
   );
 }

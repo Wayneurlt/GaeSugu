@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "slug": "photo-exhibition",
+      "type": "exhibitions",
+      "kicker": "PHOTO EXHIBITION",
+      "title": "[Event name]",
+      "day": "[DD]",
+      "month": "[MON]",
+      "meta": "[Place] · [Time]",
+      "cta": "REGISTER"
+    },
+    {
+      "slug": "nature-walk",
+      "type": "upcoming",
+      "kicker": "NATURE WALK",
+      "title": "[Event name]",
+      "day": "[DD]",
+      "month": "[MON]",
+      "meta": "[Place] · [Time]",
+      "cta": "REGISTER"
+    },
+    {
+      "slug": "essay-competition",
+      "type": "competitions-clubs",
+      "kicker": "ESSAY COMPETITION & CLUBS",
+      "title": "[Competition theme]",
+      "day": "•",
+      "month": "ONGOING",
+      "meta": "Online and in schools",
+      "cta": "JOIN"
+    }
+  ]
+}
