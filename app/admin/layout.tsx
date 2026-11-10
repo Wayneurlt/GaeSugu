@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./admin.css";
 
 export const metadata: Metadata = {
@@ -6,12 +7,9 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+// Served with the site itself, so the admin never waits on (or breaks because of) a font request.
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--font-admin" });
+
 export default function AdminRootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="admin">
-      {/* React places this stylesheet in the page head. */}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" precedence="default" />
-      {children}
-    </div>
-  );
+  return <div className={`admin ${inter.variable}`}>{children}</div>;
 }

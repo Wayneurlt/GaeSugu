@@ -27,7 +27,39 @@ const paths = {
   pen: "M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16zM13.5 6.5l4 4",
   sparkle: "M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z",
   logout: "M15 4h4a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-4M10 16l-4-4 4-4M6 12h10",
+  tick: "M5 12.5l4.5 4.5L19 7.5",
+  close: "M6 6l12 12M18 6L6 18",
+  history: "M3.5 12a8.5 8.5 0 1 0 2.6-6.1M3.5 4v4.5H8M12 7.5V12l3 2",
+  menuOpen: "M4 7h16M4 12h16M4 17h16",
 } as const;
+
+/** Solid glyphs for the stat cards, like the filled icons in the reference design. */
+export function SolidIcon({ name }: { name: "article" | "image" | "ready" }) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      {name === "article" && (
+        <>
+          <path d="M6.5 2.5h8l5 5v13a1.5 1.5 0 0 1-1.5 1.5H6.5A1.5 1.5 0 0 1 5 20.5v-16.5a1.5 1.5 0 0 1 1.5-1.5z" fill="currentColor" />
+          <path d="M8.5 12.5h7M8.5 16.5h5" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M14.5 2.5v5h5" fill="#fff" opacity="0.45" />
+        </>
+      )}
+      {name === "image" && (
+        <>
+          <rect x="2.5" y="4" width="19" height="16" rx="3" fill="currentColor" />
+          <path d="M4.5 17.5l4.5-5 3.5 3.5 2.5-2.5 4.5 4" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="16" cy="9" r="1.8" fill="#fff" />
+        </>
+      )}
+      {name === "ready" && (
+        <>
+          <circle cx="12" cy="12" r="10" fill="currentColor" />
+          <path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="#fff" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
+        </>
+      )}
+    </svg>
+  );
+}
 
 export type IconName = keyof typeof paths;
 

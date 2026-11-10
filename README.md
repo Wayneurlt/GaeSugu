@@ -6,6 +6,7 @@ Website for Gae Sugu, built with Next.js (App Router) and React, with a built-in
 npm install
 npm run dev     # http://localhost:3000
 npm run build   # production build
+npm test        # automated tests (validation, sign-in, photos, content files)
 ```
 
 ## Editing the site: the admin
@@ -22,7 +23,7 @@ Sign-in details live in environment variables, never in the code:
 | `DATABASE_URL` | The Neon Postgres database where edits are saved |
 | `GITHUB_TOKEN`, `GITHUB_REPO`, `GITHUB_BRANCH` | Optional: only used when there is no `DATABASE_URL` (see below) |
 
-On your computer, put them in `.env` or `.env.local` (git ignores both; `.env.example` lists them). For the live site, add them in **Vercel → Settings → Environment Variables** and redeploy.
+On your computer, put them in `.env` (git ignores it, so they never reach GitHub). For the live site, add them in **Vercel → Settings → Environment Variables** and redeploy.
 
 ### How saving works
 
@@ -30,6 +31,10 @@ On your computer, put them in `.env` or `.env.local` (git ignores both; `.env.ex
 - **Without a database**, on your computer (`npm run dev`) saving writes to the files in `content/` and `public/photos/`; commit and push them to publish. On Vercel each save is instead committed to GitHub (needs `GITHUB_TOKEN`, a [fine-grained token](https://github.com/settings/personal-access-tokens) with **Contents: Read and write** on this repo) and Vercel redeploys in about 1–2 minutes.
 
 Pages are pre-built and cached; each save clears that cache, so the next visit shows the change.
+
+**Version history.** With the database, every save of every section (and of the photo library) is kept, starting with the original content. Open **History** in any editor to see them: "Load" puts an older version into the editor to check, and nothing changes on the site until you press Save. In the photo library, "Restore" brings the library back as it was, including photos that were deleted since. The newest 60 versions of each section are kept, plus the original.
+
+**Sign-in protection.** After 8 wrong passwords from one address, sign-in is locked for 15 minutes. With the database the count is shared by every server, so it holds on Vercel too.
 
 Every save is checked first: it must keep the same fields as before, slugs must be valid and unique, and photos still in use cannot be deleted, so an edit cannot break a page.
 

@@ -166,11 +166,12 @@ function toDbChanges(changes: FileChange[]): DbChange[] {
     const id = contentId(c.path);
     if (id) {
       if (!isContentId(id) || c.content === null) throw new Error(`The admin cannot change ${c.path}`);
-      return [{ kind: "content", id, data: JSON.parse(c.content.toString()) }];
+      return [{ kind: "content", id, data: JSON.parse(c.content.toString()), original: contentDefaults[id] }];
     }
     const name = mediaName(c.path);
     if (name) {
-      if (c.content === null) return [{ kind: "media-delete", name }];
+      // Removed photos keep their image, so restoring an older version of the library brings them back.
+      if (c.content === null) return [];
       return [{ kind: "media", name, bytes: Buffer.from(c.content), contentType: "image/jpeg" }];
     }
     // Photos that came with the site are part of the deployment and stay there; they are just no longer listed.

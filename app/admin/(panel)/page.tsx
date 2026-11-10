@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { AdminSearch, ContentTracker, SectionChart } from "@/components/admin/Dashboard";
-import { Icon, type IconName } from "@/components/admin/icons";
+import { AdminSearch, ContentTracker, NeedsTextMenu, SectionChart } from "@/components/admin/Dashboard";
+import { Icon, SolidIcon } from "@/components/admin/icons";
 import { dashboardData } from "@/lib/admin/dashboard";
 
 const thumb = (file: string, width: number) => `/api/admin/media?file=${encodeURIComponent(file)}&w=${width}`;
@@ -11,28 +11,43 @@ const STORAGE = {
   local: { label: "This computer", text: "You are editing the files on this computer. Commit and push them to publish." },
 } as const;
 
-function Stat({ icon, label, value, of, unit, tone }: { icon: IconName; label: string; value: number; of?: number; unit?: string; tone: string }) {
+function Stat({
+  icon,
+  label,
+  value,
+  of,
+  unit,
+  tone,
+  href,
+}: {
+  icon: "article" | "image" | "ready";
+  label: string;
+  value: number;
+  of?: number;
+  unit?: string;
+  tone: string;
+  href: string;
+}) {
   return (
-    <div className={`d-stat ${tone}`}>
+    <Link href={href} className={`d-stat ${tone}`}>
       <span className="d-stat-icon">
-        <Icon name={icon} size={20} strokeWidth={2} />
+        <SolidIcon name={icon} />
       </span>
-      <div>
-        <p className="d-stat-label">{label}</p>
-        <p className="d-stat-value">
+      <span className="d-stat-text">
+        <span className="d-stat-label">{label}</span>
+        <span className="d-stat-value">
           {value}
           {of !== undefined && <span className="d-stat-of">/{of}</span>}
           {unit && <small>{unit}</small>}
-        </p>
-      </div>
-    </div>
+        </span>
+      </span>
+    </Link>
   );
 }
 
 export default async function Dashboard() {
   const data = await dashboardData();
   const storage = STORAGE[data.storage.mode];
-  const todo = data.rows.filter((r) => r.placeholders > 0).length;
 
   return (
     <div className="d-page">
@@ -40,57 +55,55 @@ export default async function Dashboard() {
         <h1>Welcome, Admin!</h1>
         <AdminSearch items={data.search} />
         <div className="d-top-right">
-          <Link href="#tracker" className="d-top-chip" title={`${todo} sections still have placeholder text`}>
-            <Icon name="bell" size={18} />
-            <span>+{todo}</span>
-          </Link>
+          <NeedsTextMenu rows={data.rows} />
           <details className="d-top-chip d-storage">
             <summary title="Where your edits are saved">
-              <Icon name="database" size={17} />
+              <Icon name="database" size={18} />
               <span>{storage.label}</span>
               <Icon name="chevronDown" size={16} />
             </summary>
             <p className="d-pop">{data.storage.ready ? storage.text : "Saving is switched off until the database is connected."}</p>
           </details>
           <a href="/" target="_blank" rel="noreferrer" className="d-btn-dark">
-            <Icon name="external" size={17} /> View site
+            <Icon name="external" size={17} strokeWidth={2} /> View site
           </a>
         </div>
       </header>
 
       <div className="d-stats">
-        <Stat icon="article" label="Articles published" value={data.stats.articles} unit={`${data.stats.readingMinutes} min read`} tone="t1" />
-        <Stat icon="image" label="Photo library" value={data.stats.photos} unit="photos" tone="t2" />
-        <Stat icon="sparkle" label="Sections ready" value={data.stats.ready} of={data.stats.total} tone="t3" />
+        <Stat icon="article" label="Articles published" value={data.stats.articles} unit="articles" tone="t1" href="/admin/edit/articles" />
+        <Stat icon="image" label="Photo library" value={data.stats.photos} unit="photos" tone="t2" href="/admin/photos" />
+        <Stat icon="ready" label="Sections ready" value={data.stats.ready} of={data.stats.total} tone="t3" href="#tracker" />
       </div>
 
       <div className="d-grid">
         <SectionChart sections={data.sections} />
 
-        <section className="d-card d-team" aria-labelledby="team-title">
+        <section className="d-card d-team" aria-labelledby="latest-title">
           <div className="d-team-head">
-            <h2 id="team-title">Founders</h2>
-            <Link href="/admin/edit/about">See all</Link>
+            <h2 id="latest-title">Latest articles</h2>
+            <Link href="/admin/edit/articles">See all</Link>
           </div>
           <ul>
-            {data.founders.map((f) => (
-              <li key={f.name}>
-                <span className="d-face" style={{ background: f.bg }}>
-                  {f.file ? <img src={thumb(f.file, 96)} alt="" /> : f.name[0]}
-                  <i aria-hidden="true" />
+            {data.latest.map((a) => (
+              <li key={a.slug}>
+                <span className="d-face" style={{ background: a.bg }}>
+                  {a.file ? <img src={thumb(a.file, 96)} alt="" /> : a.title[0]}
                 </span>
-                <span className="d-team-text">
-                  <strong>{f.name}</strong>
-                  <span>{f.role.replace(/^Co-founder · /, "")}</span>
-                </span>
-                <a href={`mailto:${data.email}`} className="a-icon-btn" aria-label={`Email ${f.name}`}>
-                  <Icon name="mail" size={17} />
+                <a href={`/articles/${a.slug}`} target="_blank" rel="noreferrer" className="d-team-text">
+                  <strong>{a.title}</strong>
+                  <span>
+                    {a.section} · {a.minutes} min
+                  </span>
                 </a>
+                <Link href={`/admin/edit/articles?item=${a.slug}`} className="a-icon-btn" aria-label={`Edit ${a.title}`} title="Edit">
+                  <Icon name="pen" size={17} />
+                </Link>
               </li>
             ))}
           </ul>
-          <Link href="/admin/edit/about" className="d-btn-outline">
-            <Icon name="plus" size={17} strokeWidth={2.2} /> Add founder
+          <Link href="/admin/edit/articles?new=1" className="d-btn-outline">
+            <Icon name="plus" size={18} strokeWidth={2} /> Add article
           </Link>
         </section>
       </div>

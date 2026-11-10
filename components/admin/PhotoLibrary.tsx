@@ -1,6 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
+import HistoryPanel from "./HistoryPanel";
+import { Icon } from "./icons";
 import { thumb, uploadPhoto, Uploader, type LitePhoto } from "./photo-tools";
 
 const FOCUS = [
@@ -17,6 +19,8 @@ export default function PhotoLibrary({ photos: initial, usage, mode, canSave }: 
   const [photos, setPhotos] = useState(initial);
   const [query, setQuery] = useState("");
   const [toast, setToast] = useState<{ kind: "ok" | "error"; text: string } | null>(null);
+  const [history, setHistory] = useState(false);
+  const closeHistory = useCallback(() => setHistory(false), []);
   const shown = photos.filter((p) => `${p.alt} ${p.id}`.toLowerCase().includes(query.toLowerCase()));
 
   const done = (text: string) => {
@@ -36,7 +40,28 @@ export default function PhotoLibrary({ photos: initial, usage, mode, canSave }: 
             them.
           </p>
         </div>
+        <div className="a-head-actions">
+          <button
+            type="button"
+            className="a-btn"
+            onClick={() => setHistory(true)}
+            disabled={mode !== "database"}
+            title={mode === "database" ? "See and bring back earlier versions of the library" : "Version history needs the database (DATABASE_URL)"}
+          >
+            <Icon name="history" size={16} /> History
+          </button>
+        </div>
       </div>
+
+      {history && (
+        <HistoryPanel
+          doc="photos"
+          title="Photo library"
+          onClose={closeHistory}
+          // The list on this page comes from the server, so reload it to show the restored library.
+          onRestored={() => window.location.reload()}
+        />
+      )}
 
       {canSave && (
         <Uploader

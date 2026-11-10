@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { isPhotoKey } from "@/lib/admin/validate";
+import HistoryPanel from "./HistoryPanel";
+import { Icon } from "./icons";
 import { PhotoPicker, thumb, type LitePhoto } from "./photo-tools";
 
 type Json = null | boolean | number | string | Json[] | { [key: string]: Json };
@@ -17,6 +19,8 @@ type Props = {
   categories: CategoryOption[];
   mode: "database" | "local" | "github";
   canSave: boolean;
+  /** Open on one list item (its slug), or start a new article. */
+  focus?: { item?: string; newItem?: boolean };
 };
 
 // ---------- Labels and hints ----------
@@ -177,6 +181,8 @@ const patternOf = (path: Path) => path.map((p) => (typeof p === "number" ? "[]" 
 // ---------- Editor ----------
 
 type Ctx = {
+  /** Slug of the list item to open and scroll to. */
+  focusSlug?: string;
   photos: LitePhoto[];
   categories: CategoryOption[];
   templates: Map<string, Json>;
@@ -184,9 +190,23 @@ type Ctx = {
   pickPhoto: (current: string, onPick: (id: string) => void) => void;
 };
 
-export default function DocEditor({ doc, initial, photos: initialPhotos, categories, mode, canSave }: Props) {
-  const [value, setValue] = useState<Obj>(initial);
+/** A new article at the end of the list (the dashboard shows the last ones as the latest), with a unique slug. */
+function withNewArticle(initial: Obj): { value: Obj; slug?: string } {
+  const list = initial.articles;
+  if (!Array.isArray(list) || !list.length) return { value: initial };
+  const taken = new Set(list.map((a) => (a && typeof a === "object" && !Array.isArray(a) ? a.slug : null)));
+  let slug = "new-article";
+  for (let n = 2; taken.has(slug); n++) slug = `new-article-${n}`;
+  const item = { ...(blank(list[0]) as Obj), slug, title: "New article" };
+  return { value: { ...initial, articles: [...list, item] }, slug };
+}
+
+export default function DocEditor({ doc, initial, photos: initialPhotos, categories, mode, canSave, focus }: Props) {
+  // Starting a new article adds it straight away (as an unsaved change), opened and ready to fill in.
+  const [start] = useState(() => (focus?.newItem && doc.id === "articles" ? withNewArticle(initial) : { value: initial, slug: focus?.item }));
+  const [value, setValue] = useState<Obj>(start.value);
   const [saved, setSaved] = useState<string>(() => JSON.stringify(initial));
+  const [history, setHistory] = useState(false);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<{ kind: "ok" | "error"; text: string; errors?: string[] } | null>(null);
   const [photos, setPhotos] = useState(initialPhotos);
@@ -196,7 +216,7 @@ export default function DocEditor({ doc, initial, photos: initialPhotos, categor
 
   const update = useCallback((path: Path, next: Json) => setValue((v) => setIn(v, path, next) as Obj), []);
   const pickPhoto = useCallback((current: string, onPick: (id: string) => void) => setPicker({ current, onPick }), []);
-  const ctx: Ctx = { photos, categories, templates, update, pickPhoto };
+  const ctx: Ctx = { focusSlug: start.slug, photos, categories, templates, update, pickPhoto };
 
   const save = useCallback(async () => {
     if (!canSave || busy) return;
@@ -269,6 +289,7 @@ export default function DocEditor({ doc, initial, photos: initialPhotos, categor
     return () => clearTimeout(t);
   }, [message]);
 
+  const closeHistory = useCallback(() => setHistory(false), []);
   const sections = Object.entries(value);
 
   return (
@@ -278,9 +299,20 @@ export default function DocEditor({ doc, initial, photos: initialPhotos, categor
           <h1>{doc.title}</h1>
           <p className="a-muted">{doc.description}</p>
         </div>
-        <a href={doc.view} target="_blank" rel="noreferrer" className="a-btn">
-          View on site ↗
-        </a>
+        <div className="a-head-actions">
+          <button
+            type="button"
+            className="a-btn"
+            onClick={() => setHistory(true)}
+            disabled={mode !== "database"}
+            title={mode === "database" ? "See and bring back earlier versions" : "Version history needs the database (DATABASE_URL)"}
+          >
+            <Icon name="history" size={16} /> History
+          </button>
+          <a href={doc.view} target="_blank" rel="noreferrer" className="a-btn">
+            View on site ↗
+          </a>
+        </div>
       </div>
 
       <div className="a-savebar">
@@ -312,7 +344,11 @@ export default function DocEditor({ doc, initial, photos: initialPhotos, categor
       )}
 
       {sections.map(([key, v], i) => (
-        <details key={key} className="a-section" open={sections.length === 1 || i === 0}>
+        <details
+          key={key}
+          className="a-section"
+          open={sections.length === 1 || (start.slug ? JSON.stringify(v).includes(`"slug":"${start.slug}"`) : i === 0)}
+        >
           <summary>{humanize(key)}</summary>
           <div className="a-section-body">
             <Field ctx={ctx} path={[key]} name={key} value={v} parent={value} hideLabel />
@@ -324,6 +360,18 @@ export default function DocEditor({ doc, initial, photos: initialPhotos, categor
         <div className="a-notice ok a-toast" role="status">
           {message.text}
         </div>
+      )}
+
+      {history && (
+        <HistoryPanel
+          doc={doc.id}
+          title={doc.title}
+          onClose={closeHistory}
+          onLoad={(data, when) => {
+            setValue(data as Obj);
+            setMessage({ kind: "ok", text: `Loaded the version from ${when}. Check it, then press Save to bring it back.` });
+          }}
+        />
       )}
 
       {picker && (
@@ -525,8 +573,19 @@ function ListTools({ ctx, path, list, index, onDuplicate }: { ctx: Ctx; path: Pa
   );
 }
 
+const slugOf = (item: Json) => (item && typeof item === "object" && !Array.isArray(item) && typeof item.slug === "string" ? item.slug : undefined);
+
 function ObjectListField({ ctx, path, name, value, hideLabel }: FieldProps & { value: Json[] }) {
-  const [open, setOpen] = useState<Set<number>>(() => new Set(value.length === 1 ? [0] : []));
+  const focusIndex = ctx.focusSlug ? value.findIndex((item) => slugOf(item) === ctx.focusSlug) : -1;
+  const [open, setOpen] = useState<Set<number>>(() => new Set(focusIndex >= 0 ? [focusIndex] : value.length === 1 ? [0] : []));
+  const focusRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (focusIndex < 0) return;
+    focusRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+    focusRef.current?.querySelector<HTMLElement>("input, textarea")?.focus({ preventScroll: true });
+    // Only when the editor opens.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const template = value[0] ?? ctx.templates.get(patternOf(path));
   const toggle = (i: number) =>
     setOpen((s) => {
@@ -547,7 +606,7 @@ function ObjectListField({ ctx, path, name, value, hideLabel }: FieldProps & { v
       {!hideLabel && <span className="a-field-label">{humanize(name)}</span>}
       <div className="a-list">
         {value.map((item, i) => (
-          <div key={i} className="a-item">
+          <div key={i} className={`a-item${i === focusIndex ? " focused" : ""}`} ref={i === focusIndex ? focusRef : undefined}>
             <div className="a-item-head" onClick={() => toggle(i)}>
               <span aria-hidden="true">{open.has(i) ? "▾" : "▸"}</span>
               <span className="a-item-title">{itemTitle(item, name, i)}</span>

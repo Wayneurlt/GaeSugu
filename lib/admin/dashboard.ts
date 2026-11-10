@@ -4,33 +4,7 @@ import { type Content, contentDefaults } from "@/lib/content";
 import { readContentDates } from "@/lib/db";
 import { docs } from "./docs";
 import { readJson, storageInfo } from "./storage";
-import { isPhotoKey } from "./validate";
-
-/** A placeholder waiting for real words, like "[Add a few lines in your own words.]". */
-const PLACEHOLDER = /\[[^\]"]{2,}\]/;
-/** Fields that hold links, colours, slugs or photo ids rather than words. */
-const NOT_TEXT = /^(href|.*Href|slug|bg|color|colors|focus|file|blur|id|type|kind|category|topic)$/;
-
-/** Counts the words-fields in a content file, and how many still hold a placeholder. */
-function countText(value: unknown, key = ""): { texts: number; placeholders: number } {
-  if (typeof value === "string") {
-    if (NOT_TEXT.test(key) || isPhotoKey(key) || /^(#|\/|https?:|mailto:|data:)/.test(value)) return { texts: 0, placeholders: 0 };
-    return { texts: 1, placeholders: PLACEHOLDER.test(value) ? 1 : 0 };
-  }
-  const children: [string, unknown][] = Array.isArray(value)
-    ? value.map((v) => [key, v])
-    : value && typeof value === "object"
-      ? Object.entries(value)
-      : [];
-  if (isPhotoKey(key)) return { texts: 0, placeholders: 0 };
-  return children.reduce(
-    (sum, [k, v]) => {
-      const c = countText(v, k);
-      return { texts: sum.texts + c.texts, placeholders: sum.placeholders + c.placeholders };
-    },
-    { texts: 0, placeholders: 0 },
-  );
-}
+import { countText } from "./completeness";
 
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"}`;
 
@@ -136,18 +110,24 @@ export async function dashboardData() {
       };
     });
 
-  const founders = c.about.founders.map((f) => ({
-    name: f.name,
-    role: f.role,
-    bg: f.bg,
-    file: photos.find((p) => p.id === f.photo)?.file,
-  }));
+  // The newest articles are added last in the editor, so show the list from the end.
+  const latest = [...c.articles.articles]
+    .reverse()
+    .slice(0, 4)
+    .map((a) => ({
+      slug: a.slug,
+      title: a.title,
+      section: c.categories.categories.find((x) => x.slug === a.category)?.label ?? a.category,
+      minutes: Number(a.minutes) || 0,
+      bg: a.color,
+      file: photos.find((p) => p.id === a.photo)?.file,
+    }));
 
   return {
     storage,
     rows,
     sections,
-    founders,
+    latest,
     email: c.settings.email,
     stats: {
       articles: c.articles.articles.length,
@@ -159,7 +139,7 @@ export async function dashboardData() {
     edited: rows.filter((r) => r.edited).length,
     search: [
       ...rows.map((r) => ({ label: r.title, hint: "Section", href: r.href })),
-      ...c.articles.articles.map((a) => ({ label: a.title, hint: "Article", href: "/admin/edit/articles" })),
+      ...c.articles.articles.map((a) => ({ label: a.title, hint: "Article", href: `/admin/edit/articles?item=${a.slug}` })),
       ...photos.map((p) => ({ label: p.alt || p.id, hint: "Photo", href: "/admin/photos" })),
     ],
   };
